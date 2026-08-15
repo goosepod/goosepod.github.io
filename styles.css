@@ -238,7 +238,7 @@ p {
   display: grid;
   gap: 36px;
   grid-template-columns: 86px minmax(0, 1fr);
-  max-width: 850px;
+  max-width: 930px;
   padding-block: 95px 80px;
 }
 
@@ -298,8 +298,48 @@ p {
 
 .hero-screenshot img {
   margin: 0 auto;
-  max-width: 850px;
+  max-width: 900px;
   width: 100%;
+}
+
+.service-grid,
+.feature-grid {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.service-grid {
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.service-card {
+  background: var(--paper);
+  min-height: 190px;
+  padding: 30px;
+}
+
+.service-card h3,
+.feature-card h3 {
+  font-size: 1rem;
+  margin: 0 0 10px;
+}
+
+.service-card p,
+.feature-card p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.feature-grid {
+  column-gap: 40px;
+  row-gap: 0;
+}
+
+.feature-card {
+  border-top: 1px solid var(--line);
+  padding-block: 28px 34px;
 }
 
 .feature-list {
@@ -325,26 +365,30 @@ p {
   max-width: 670px;
 }
 
-.screenshots {
+.screenshot-section {
+  background: var(--soft);
+}
+
+.screenshot-grid {
   align-items: start;
   display: grid;
   gap: 22px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.screenshots figure {
-  background: var(--soft);
+.screenshot-grid figure {
+  background: var(--paper);
   border: 1px solid var(--line);
   margin: 0;
-  padding: 28px 28px 0;
+  padding: 22px 22px 0;
 }
 
-.screenshots figure:first-child {
-  grid-column: 1 / -1;
-}
-
-.screenshots img {
+.screenshot-grid img {
   margin: 0 auto;
+}
+
+.screenshot-grid figure img {
+  max-height: 660px;
 }
 
 .project-details {
@@ -456,6 +500,11 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .service-grid,
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
   .product-intro {
     gap: 20px;
     grid-template-columns: 1fr;
@@ -472,12 +521,8 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .screenshots {
-    grid-template-columns: 1fr;
-  }
-
-  .screenshots figure:first-child {
-    grid-column: auto;
+  .screenshot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .privacy-wrap {
@@ -503,8 +548,12 @@ p {
   }
 
   .project-image,
-  .screenshots figure {
+  .screenshot-grid figure {
     padding: 16px 16px 0;
+  }
+
+  .screenshot-grid {
+    grid-template-columns: 1fr;
   }
 
   .footer-row {
