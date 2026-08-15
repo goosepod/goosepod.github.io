@@ -173,6 +173,32 @@ p {
   width: 58px;
 }
 
+.project-mark,
+.product-mark {
+  align-items: center;
+  background: linear-gradient(145deg, #172338, #2154c5);
+  color: #ffffff;
+  display: flex;
+  flex: 0 0 auto;
+  font-weight: 750;
+  justify-content: center;
+  letter-spacing: -0.04em;
+}
+
+.project-mark {
+  border-radius: 15px;
+  font-size: 1.15rem;
+  height: 58px;
+  width: 58px;
+}
+
+.product-mark {
+  border-radius: 22px;
+  font-size: 1.55rem;
+  height: 78px;
+  width: 78px;
+}
+
 .project-copy h3 {
   font-size: 2rem;
   letter-spacing: -0.035em;
@@ -192,6 +218,16 @@ p {
 
 .project-image img {
   margin: 0 auto;
+}
+
+.project-summary-secondary {
+  border-top: 1px solid var(--line);
+  margin-top: 70px;
+  padding-top: 70px;
+}
+
+.plugin-project-image {
+  padding-bottom: 28px;
 }
 
 .about-grid {
@@ -300,6 +336,10 @@ p {
   margin: 0 auto;
   max-width: 900px;
   width: 100%;
+}
+
+.plugin-screenshot img {
+  max-width: 1004px;
 }
 
 .service-grid,
@@ -415,6 +455,63 @@ p {
   padding-left: 1.2rem;
 }
 
+.plain-feature-list {
+  margin-bottom: 0;
+}
+
+.plain-feature-list li + li {
+  margin-top: 8px;
+}
+
+.install-steps {
+  border-top: 1px solid var(--line);
+}
+
+.install-step {
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  gap: 26px;
+  grid-template-columns: 42px minmax(0, 1fr);
+  padding-block: 28px;
+}
+
+.install-step > span {
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--muted);
+  display: flex;
+  font-size: 0.85rem;
+  font-weight: 700;
+  height: 34px;
+  justify-content: center;
+  width: 34px;
+}
+
+.install-step h3 {
+  font-size: 1rem;
+  margin: 2px 0 7px;
+}
+
+.install-step p {
+  color: var(--muted);
+  margin: 0;
+  max-width: 760px;
+}
+
+.notice {
+  background: var(--soft);
+  border-left: 3px solid var(--accent);
+  color: #404954;
+  margin-block: 26px;
+  padding: 18px 20px;
+}
+
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.88em;
+}
+
 .privacy-wrap {
   padding-block: 80px 110px;
 }
@@ -512,6 +609,12 @@ p {
   }
 
   .product-intro img {
+    height: 64px;
+    width: 64px;
+  }
+
+  .product-mark {
+    border-radius: 18px;
     height: 64px;
     width: 64px;
   }

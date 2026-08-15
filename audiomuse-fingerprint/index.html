@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Per-User Sonic Fingerprint is an AudioMuse-AI plugin that creates a personal Sonic Fingerprint playlist for each Navidrome user.">
+  <meta name="theme-color" content="#fafaf7">
+  <meta property="og:title" content="Per-User Sonic Fingerprint — AudioMuse-AI plugin">
+  <meta property="og:description" content="Give every Navidrome listener a personal Sonic Fingerprint playlist, refreshed by AudioMuse-AI on demand or on a schedule.">
+  <meta property="og:image" content="https://goosepod.com/assets/audiomuse-fingerprint/settings.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://goosepod.com/audiomuse-fingerprint/">
+  <title>Per-User Sonic Fingerprint — Goosepod</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Primary navigation">
+      <a class="site-name" href="/">Goosepod</a>
+      <div class="nav-links">
+        <a href="/naviamp/">Naviamp</a>
+        <a href="/audiomuse-fingerprint/" aria-current="page">Sonic Fingerprint</a>
+        <a href="https://github.com/goosepod/audiomuse-fingerprint-plugin">GitHub</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="product-intro container">
+      <div class="product-mark" aria-hidden="true">SF</div>
+      <div>
+        <p class="product-status">Plugin for AudioMuse-AI</p>
+        <h1>A Sonic Fingerprint for every listener.</h1>
+        <p class="intro">Per-User Sonic Fingerprint turns AudioMuse-AI's similarity analysis and each person's listening history into a separate playlist in their own Navidrome account.</p>
+        <div class="meta-list" aria-label="Plugin details"><span>AudioMuse-AI 3.2+</span><span>Navidrome</span><span>Version 0.2.0</span><span>AGPL-3.0</span></div>
+        <div class="inline-links"><a href="#install">Install from AudioMuse</a><a href="https://github.com/goosepod/audiomuse-fingerprint-plugin">View on GitHub</a></div>
+      </div>
+    </section>
+
+    <section class="hero-screenshot plugin-screenshot">
+      <div class="container"><img src="/assets/audiomuse-fingerprint/settings.png" alt="Per-User Sonic Fingerprint settings page in AudioMuse-AI"></div>
+    </section>
+
+    <section class="section">
+      <div class="container project-details">
+        <h2>What it does</h2>
+        <div>
+          <p>AudioMuse-AI already understands how the songs in a library relate to one another. This plugin applies that analysis separately for every configured Navidrome listener, using their listening history to create or refresh a playlist that belongs to them.</p>
+          <ul class="plain-feature-list">
+            <li>Configure multiple users, even across multiple Navidrome instances.</li>
+            <li>Choose the playlist name and number of tracks for each profile.</li>
+            <li>Refresh one listener immediately with <strong>Run Now</strong>.</li>
+            <li>Enable AudioMuse's scheduled task for automatic recurring updates.</li>
+            <li>Preserve the existing playlist if a refresh produces no tracks.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="install">
+      <div class="container">
+        <div class="section-title"><h2>Install it from AudioMuse</h2><p>It is included in the default community catalog.</p></div>
+        <div class="install-steps">
+          <article class="install-step"><span>1</span><div><h3>Open the plugin catalog</h3><p>Sign in to AudioMuse-AI as an administrator, open <strong>Plugins → Manage Plugins</strong>, and select the <strong>Catalog</strong> tab.</p></div></article>
+          <article class="install-step"><span>2</span><div><h3>Install Per-User Sonic Fingerprint</h3><p>Find the plugin in the catalog and click <strong>Install</strong>. It ships through AudioMuse's default community repository, so there is no catalog URL to add manually.</p></div></article>
+          <article class="install-step"><span>3</span><div><h3>Apply the restart</h3><p>Confirm AudioMuse's plugin warning, then use <strong>Apply now (restart)</strong> when prompted so the web and worker containers load the plugin.</p></div></article>
+          <article class="install-step"><span>4</span><div><h3>Add each listener</h3><p>Open <strong>Installed → Per-User Sonic Fingerprint → Settings</strong>. Choose a Navidrome instance, enter the listener's credentials, set the playlist name and size, then save.</p></div></article>
+          <article class="install-step"><span>5</span><div><h3>Run now or schedule it</h3><p>Use <strong>Run Now</strong> for an immediate refresh. For automatic updates, open <strong>Administration → Scheduled Tasks</strong> and enable <code>plugin.per_user_sonic_fingerprint.refresh</code>. The installed default is Sunday at 04:00 and starts disabled.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container project-details">
+        <h2>Requirements and security</h2>
+        <div>
+          <p>You need AudioMuse-AI 3.2.0 or newer, a completed analysis with its similarity index available, Navidrome users with listening history, and a persistent AudioMuse plugin directory.</p>
+          <div class="notice"><strong>Container deployment required.</strong> The plugin installs the <code>cryptography</code> package, so it works with AudioMuse's Docker or Kubernetes images when plugin dependency installation is enabled. AudioMuse standalone builds cannot install extra plugin packages and mark it incompatible.</div>
+          <p>Saved Navidrome passwords are never stored or shown as plain text. The plugin encrypts them with AES-256-GCM using a separate random key in the persistent plugin directory. Back up that key together with the AudioMuse database.</p>
+          <div class="inline-links"><a href="https://github.com/goosepod/audiomuse-fingerprint-plugin">Source and detailed setup</a><a href="https://github.com/NeptuneHub/AudioMuse-AI/blob/main/docs/PLUGIN.md">AudioMuse plugin guide</a><a href="https://github.com/NeptuneHub/AudioMuse-AI-plugins">Community catalog</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row"><span>© 2026 Goosepod</span><div class="footer-links"><a href="/">Home</a><a href="/naviamp/">Naviamp</a><a href="https://github.com/goosepod/audiomuse-fingerprint-plugin">GitHub</a></div></div>
+  </footer>
+</body>
+</html>
