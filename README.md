@@ -1,6 +1,6 @@
-# Goosepod website
+# GoosePod website
 
-Static source for the Goosepod organization website and the Naviamp, feedss, and AudioMuse Sonic Fingerprint project pages.
+Static source for the GoosePod organization website and the Naviamp, feedss, and AudioMuse Sonic Fingerprint project pages.
 
 ## Local preview
 
