@@ -230,6 +230,15 @@ p {
   padding-bottom: 28px;
 }
 
+.feedss-project-image {
+  align-self: start;
+  padding-bottom: 28px;
+}
+
+.feedss-project-image img {
+  border: 1px solid var(--line);
+}
+
 .about-grid {
   display: grid;
   gap: 50px;
@@ -339,6 +348,11 @@ p {
 }
 
 .plugin-screenshot img {
+  max-width: 1004px;
+}
+
+.feedss-screenshot img {
+  border: 1px solid var(--line);
   max-width: 1004px;
 }
 
