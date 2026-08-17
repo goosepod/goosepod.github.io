@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="feedss is a fast, self-hosted RSS reader with grouped subscriptions, per-feed reading modes, keyboard navigation, and a local SQLite database.">
+  <meta name="theme-color" content="#176b4d">
+  <meta property="og:title" content="feedss — A focused, self-hosted RSS reader">
+  <meta property="og:description" content="Keep up with the sites you care about in a fast, focused reader you host yourself.">
+  <meta property="og:image" content="https://goosepod.com/assets/feedss/reader.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://goosepod.com/feedss/">
+  <title>feedss — A focused, self-hosted RSS reader</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/feedss/icon.svg">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Primary navigation">
+      <a class="site-name" href="/">Goosepod</a>
+      <div class="nav-links">
+        <a href="/naviamp/">Naviamp</a>
+        <a href="/audiomuse-fingerprint/">Sonic Fingerprint</a>
+        <a href="/feedss/" aria-current="page">feedss</a>
+        <a href="https://github.com/goosepod/feedss">GitHub</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="product-intro container">
+      <img src="/assets/feedss/icon.svg" alt="feedss app icon">
+      <div>
+        <p class="product-status">feedss 0.4.0</p>
+        <h1>Your feeds.<br>Your server.</h1>
+        <p class="intro">feedss is a small, focused RSS reader for keeping up with the sites you care about—without recommendations, tracking, or a hosted account.</p>
+        <div class="meta-list" aria-label="Project details"><span>Self-hosted</span><span>Docker</span><span>SQLite</span><span>Keyboard friendly</span></div>
+        <div class="inline-links"><a href="https://github.com/goosepod/feedss#run-with-docker-compose">Run feedss</a><a href="https://github.com/goosepod/feedss">View on GitHub</a></div>
+      </div>
+    </section>
+
+    <section class="hero-screenshot feedss-screenshot">
+      <div class="container"><img src="/assets/feedss/reader.png" alt="feedss showing grouped subscriptions and expanded NASA astronomy articles"></div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title"><h2>Reading without ceremony</h2><p>Everything important stays close at hand.</p></div>
+        <div class="feature-grid">
+          <article class="feature-card"><h3>Organize subscriptions</h3><p>Arrange feeds into groups, see unread totals at a glance, and move between groups or individual sources.</p></article>
+          <article class="feature-card"><h3>Choose how much to read</h3><p>Use headlines, headline-and-summary, or full-content mode as the default and override it for individual feeds.</p></article>
+          <article class="feature-card"><h3>Stay on the keyboard</h3><p>Move through articles, feeds, and groups; open originals or comments; and mark a view read with compact shortcuts.</p></article>
+          <article class="feature-card"><h3>See where stories come from</h3><p>Source favicons, timestamps, direct headline links, and clear read state keep every article grounded in its original site.</p></article>
+          <article class="feature-card"><h3>Bring your subscriptions</h3><p>Import and export OPML, then tune display and sort behavior without rebuilding your feed list.</p></article>
+          <article class="feature-card"><h3>Keep it local</h3><p>A single Go service stores accounts, subscriptions, settings, and article state in a local SQLite database.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container project-details">
+        <h2>Run it yourself</h2>
+        <div>
+          <p>feedss is distributed as cross-platform binaries and a multi-architecture container image. Point it at a persistent data directory, expose one port, and the reader is ready.</p>
+          <p>The interface works across desktop and narrow screens, automatically refreshes feeds on your schedule, and can notify administrators when a new feedss release is available.</p>
+          <div class="inline-links"><a href="https://github.com/goosepod/feedss/releases">Get the latest release</a><a href="https://github.com/goosepod/feedss#run-with-docker-compose">Docker Compose setup</a><a href="https://github.com/goosepod/feedss">Source code</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row"><span>© 2026 Goosepod</span><div class="footer-links"><a href="/">Home</a><a href="/naviamp/">Naviamp</a><a href="https://github.com/goosepod/feedss">GitHub</a></div></div>
+  </footer>
+</body>
+</html>
