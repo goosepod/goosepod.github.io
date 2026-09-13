@@ -32,7 +32,7 @@
     <section class="product-intro container">
       <img src="/assets/naviamp/icon.svg" alt="Naviamp app icon">
       <div>
-        <p class="product-status">Naviamp 2.0</p>
+        <p class="product-status">Open-source music player</p>
         <h1>Your music,<br>wherever it lives.</h1>
         <p class="intro">Connect Navidrome, another Subsonic or OpenSubsonic server, Jellyfin, or your Bandcamp collection. Naviamp turns it into one polished library for browsing, discovery, playlists, radio, downloads, and playback.</p>
         <div class="meta-list" aria-label="Supported platforms"><span>macOS</span><span>Windows</span><span>Linux</span><span>Android</span><span>iOS preview</span></div>
@@ -72,6 +72,74 @@
       </div>
     </section>
 
+    <section class="section">
+      <div class="container">
+        <div class="section-title"><h2>Playback format support</h2><p>Direct playback across every Naviamp platform.</p></div>
+        <p class="table-note"><strong>Compatibility</strong> means Naviamp ships a decoder for that platform, but the format is not yet part of the fully tested cross-platform release contract. A dash means Naviamp does not currently promise direct playback there; a Navidrome server may still make the file playable by transcoding it.</p>
+        <div class="support-table-wrap" role="region" aria-label="Playback format support by platform" tabindex="0">
+          <table class="support-table format-support-table">
+            <thead><tr><th scope="col">Audio format or stream</th><th scope="col">Android</th><th scope="col">macOS</th><th scope="col">Windows</th><th scope="col">Linux</th><th scope="col">iOS</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">MP3, MP2, and MP1</th><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+              <tr><th scope="row">Ogg Vorbis</th><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+              <tr><th scope="row">WAV</th><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+              <tr><th scope="row">AIFF</th><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+              <tr><th scope="row">FLAC and Ogg FLAC</th><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+              <tr><th scope="row">Opus</th><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+              <tr><th scope="row">AAC and AAC in M4A/MP4</th><td>Yes</td><td>Yes <span class="cell-note">system codec</span></td><td>Yes</td><td>Yes</td><td>Yes <span class="cell-note">system codec</span></td></tr>
+              <tr><th scope="row">ALAC in M4A/MP4</th><td>Yes</td><td>Yes <span class="cell-note">system codec</span></td><td>Yes</td><td>Yes</td><td>Yes <span class="cell-note">system codec</span></td></tr>
+              <tr><th scope="row">Monkey's Audio <code>.ape</code></th><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td></tr>
+              <tr><th scope="row">DSD <code>.dsf</code>, <code>.dff</code></th><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td></tr>
+              <tr><th scope="row">Musepack <code>.mpc</code></th><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td></tr>
+              <tr><th scope="row">WebM and Matroska audio</th><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td></tr>
+              <tr><th scope="row">WavPack <code>.wv</code></th><td>Compatibility</td><td>Compatibility</td><td>—</td><td>Compatibility</td><td>Compatibility</td></tr>
+              <tr><th scope="row">AC-3 <code>.ac3</code></th><td>Compatibility</td><td>—</td><td>—</td><td>Compatibility</td><td>—</td></tr>
+              <tr><th scope="row">HLS streams and playlists</th><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td></tr>
+              <tr><th scope="row">MIDI, Speex, and WMA</th><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-footnote">This table describes direct Naviamp playback, including downloaded originals. Transcoded streams and downloads use the format produced by the server. MIDI is not advertised even where a decoder is packaged because Naviamp does not ship the soundfont required for reliable playback.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title"><h2>Naviamp + Navidrome support</h2><p>Core features and the server enhancements that unlock more.</p></div>
+        <p class="table-note">Most app behavior is shared across every release platform. Server-backed features depend on the connected account's permissions and on the capabilities the server advertises; Naviamp removes controls that the active server cannot fulfill.</p>
+        <div class="support-table-wrap" role="region" aria-label="Naviamp and Navidrome feature support" tabindex="0">
+          <table class="support-table feature-support-table">
+            <thead><tr><th scope="col">Capability</th><th scope="col">Naviamp support</th><th scope="col">Navidrome or server requirement</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Browse and search artists, albums, tracks, genres, favorites, recent music, and random picks</th><td>Yes</td><td>Standard Subsonic/OpenSubsonic library APIs</td></tr>
+              <tr><th scope="row">Browse every credited artist and follow artist links from a track</th><td>Yes</td><td>Rich artist-credit metadata when supplied by the server</td></tr>
+              <tr><th scope="row">Select and combine music libraries</th><td>Yes</td><td>Multiple music folders exposed by the server</td></tr>
+              <tr><th scope="row">Create, rename, reorder, edit, and delete regular playlists</th><td>Yes</td><td>Playlist write permission</td></tr>
+              <tr><th scope="row">Save the current queue or a generated mix as a playlist</th><td>Yes</td><td>Playlist write permission</td></tr>
+              <tr><th scope="row">Create and edit native smart playlists</th><td>Navidrome enhancement</td><td>Navidrome native API; includes nested rules, multiple sorts, limits, NSP JSON import, and preview against the synced library</td></tr>
+              <tr><th scope="row">Stream original-quality audio</th><td>Yes</td><td>A directly supported source format, or server transcoding</td></tr>
+              <tr><th scope="row">Stream at a selected transcoded quality</th><td>Yes</td><td>Server transcoding support</td></tr>
+              <tr><th scope="row">Download originals or transcoded copies for offline listening</th><td>Yes</td><td>Download permission; transcoded downloads require server support</td></tr>
+              <tr><th scope="row">Favorite tracks, albums, and artists</th><td>Yes</td><td>Server favorite/star APIs</td></tr>
+              <tr><th scope="row">Rate tracks from one to five stars</th><td>Yes</td><td>Server rating support</td></tr>
+              <tr><th scope="row">Display plain, time-synced, and enhanced lyrics</th><td>Server-dependent</td><td>Legacy lyrics or the OpenSubsonic <code>songLyrics</code> extension; enhanced lyrics use version 2</td></tr>
+              <tr><th scope="row">Build artist, album, genre, and track radio queues</th><td>Yes</td><td>Generated-radio endpoints</td></tr>
+              <tr><th scope="row">Sonic Mix, Sonic Path, related tracks, and sonic autoplay</th><td>Navidrome enhancement</td><td>Server advertises the OpenSubsonic <code>sonicSimilarity</code> extension and has similarity data</td></tr>
+              <tr><th scope="row">Report plays and update listening history</th><td>Yes</td><td>Scrobbling support; falls back to the standard Subsonic endpoint</td></tr>
+              <tr><th scope="row">Report precise playback position and completion</th><td>Navidrome enhancement</td><td>OpenSubsonic <code>playbackReport</code> extension</td></tr>
+              <tr><th scope="row">Resume a transcoded stream from a server-side offset</th><td>Navidrome enhancement</td><td>OpenSubsonic <code>transcodeOffset</code> extension</td></tr>
+              <tr><th scope="row">Browse, create, edit, delete, and play internet radio stations</th><td>Yes</td><td>Internet-radio station APIs for saved stations</td></tr>
+              <tr><th scope="row">Authenticate with a renewable native session token</th><td>Navidrome enhancement</td><td>Navidrome native authentication; standard token-and-salt authentication remains available</td></tr>
+              <tr><th scope="row">Gapless playback, crossfade, ReplayGain, equalizer, sample-rate matching, and downmixing</th><td>Yes</td><td>Performed locally by Naviamp's BASS playback engine</td></tr>
+              <tr><th scope="row">Waveform seeking, audio metadata, lyrics timing, and visualizers</th><td>Yes</td><td>Performed locally; metadata and lyrics depend on the source</td></tr>
+              <tr><th scope="row">Android Auto</th><td>Android only</td><td>Android host and a connected media-capable vehicle or head unit</td></tr>
+              <tr><th scope="row">Podcasts, server chat, public shares, and jukebox control</th><td>Not currently supported</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
     <section class="section screenshot-section">
       <div class="container">
         <div class="section-title"><h2>Take a look</h2><p>The same shared experience in compact and narrow layouts.</p></div>
@@ -95,7 +163,7 @@
         <div>
           <p>Your library stays with the service or server you choose. Naviamp contains no ads or third-party tracking SDKs, and credentials use operating-system secure storage where supported.</p>
           <p>Provider capabilities differ, so Naviamp hides or gracefully falls back from server-specific features instead of leaving broken controls behind.</p>
-          <p>Naviamp 2.0 is available for macOS, Windows, Linux, and Android. An unsigned arm64 iPhone/iPad IPA preview is available for users who can provide their own signing.</p>
+          <p>Naviamp is available for macOS, Windows, Linux, and Android. An unsigned arm64 iPhone/iPad IPA preview is available for users who can provide their own signing.</p>
           <p>Naviamp is translated by its community using Weblate.</p>
           <div class="inline-links"><a href="https://github.com/goosepod/naviamp/releases">Get the latest release</a><a href="https://hosted.weblate.org/projects/naviamp/">Help translate on Weblate</a><a href="/naviamp/privacy/">Privacy policy</a><a href="https://github.com/goosepod/naviamp">View on GitHub</a></div>
         </div>
