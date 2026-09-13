@@ -396,6 +396,86 @@ p {
   padding-block: 28px 34px;
 }
 
+.table-note,
+.table-footnote {
+  color: var(--muted);
+  max-width: 850px;
+}
+
+.table-note {
+  margin: -18px 0 28px;
+}
+
+.table-footnote {
+  font-size: 0.9rem;
+  margin: 20px 0 0;
+}
+
+.support-table-wrap {
+  border: 1px solid var(--line);
+  overflow-x: auto;
+}
+
+.support-table-wrap:focus-visible {
+  outline: 3px solid rgba(33, 84, 197, 0.35);
+  outline-offset: 3px;
+}
+
+.support-table {
+  background: var(--paper);
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  min-width: 820px;
+  width: 100%;
+}
+
+.support-table th,
+.support-table td {
+  border-bottom: 1px solid var(--line);
+  padding: 15px 17px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.support-table thead th {
+  background: var(--soft);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.support-table tbody th {
+  font-weight: 650;
+}
+
+.support-table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.format-support-table th:not(:first-child),
+.format-support-table td {
+  text-align: center;
+}
+
+.format-support-table th:first-child {
+  min-width: 220px;
+}
+
+.feature-support-table th:first-child {
+  width: 37%;
+}
+
+.feature-support-table th:nth-child(2) {
+  width: 19%;
+}
+
+.cell-note {
+  color: var(--muted);
+  display: block;
+  font-size: 0.76rem;
+}
+
 .feature-list {
   border-top: 1px solid var(--line);
 }
