@@ -76,3 +76,12 @@ blocked by a local preview-only Content Security Policy for the no-JavaScript ch
 close button, backdrop click, Escape, and direct-image/Back navigation passed. Each new feature page
 fit the phone viewport without horizontal page overflow. This does not substitute for testing older
 browser engines; their documented fallback is the ordinary direct-image link.
+
+## Persistent header and community links
+
+The product header uses CSS sticky positioning, with section scroll margins that leave room for the
+header on desktop and phones. Discord and GitHub marks are local SVG assets, with accessible link
+names, hover titles, and 44-pixel hit targets. Icon source/license information is in
+`assets/social/README.md`. Checked while scrolled on desktop and at 390 × 844: both icons load,
+all navigation links remain available, section targets clear the header, and the page has no
+horizontal overflow. No JavaScript was added.
