@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Control another Naviamp player, manage its queue, and move listening between paired Android and desktop devices. Currently in beta.">
+    <meta name="theme-color" content="#fafaf7">
+    <meta property="og:title" content="Naviamp Connect — Naviamp">
+    <meta property="og:description" content="Control another Naviamp player, manage its queue, and move listening between paired Android and desktop devices. Currently in beta.">
+    <meta property="og:image" content="https://goosepod.com/assets/naviamp/social-preview.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://goosepod.com/naviamp/connect/">
+    <title>Naviamp Connect — Naviamp</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/naviamp/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/naviamp/apple-touch-icon.png">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/naviamp/website.css">
+  </head>
+  <body class="naviamp-site"><a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="site-nav container" aria-label="Primary navigation"><a class="site-name product-brand" href="/naviamp/"><img src="/assets/naviamp/icon.svg" width="32" height="32" alt="">Naviamp</a>
+        <div class="nav-links"><a href="/naviamp/features/">Features</a><a href="/naviamp/connect/">Connect</a><a href="/naviamp/#player-sizes">Player sizes</a><a href="/naviamp/#screenshots">Screenshots</a><a href="/naviamp/#help">Help</a><a href="/naviamp/#downloads">Download</a></div>
+      <div class="header-socials" aria-label="Naviamp community"><a class="social-icon" href="https://discord.gg/7dd9954VGd" aria-label="Join Naviamp on Discord" title="Discord"><img src="/assets/social/discord.svg" width="22" height="22" alt=""></a><a class="social-icon" href="https://github.com/goosepod/naviamp" aria-label="Naviamp on GitHub" title="GitHub"><img src="/assets/social/github.svg" width="22" height="22" alt=""></a></div>
+</nav>
+    </header>
+    <main id="main">
+
+      <section class="container feature-intro"><a href="/naviamp/">← Back to Naviamp</a>
+        <p class="eyebrow">Naviamp Connect · Beta</p>
+        <h1>Choose where it plays.<br>Keep control close.</h1>
+        <p class="lead">A remote for the music you own, built into the player you already use.</p>
+      </section>
+
+      <section class="section">
+        <div class="container detail-split">
+          <div class="reading-copy">
+            <h2>Your phone in your hand.<br>Your music on the other player.</h2>
+            <p>Put Naviamp on your computer or Android TV, then use another Naviamp device to browse your collection, choose a track, and control the queue.</p>
+            <p>The playback device streams directly from your music server. Your controller sends commands and follows what’s playing, so the music can keep going when you stop controlling it.</p>
+            <p class="requirement">Naviamp Connect is a beta for Android and desktop. Android TV receives playback; phones and desktops can control or receive it. iOS Connect is not included in the current preview.</p>
+          </div>
+          <div class="connect-diagram" role="img" aria-label="Your phone or desktop sends playback commands to a paired Naviamp player. The music streams from your music server directly to the playback device.">
+            <div class="device-card"><span aria-hidden="true">▯</span><strong>Your phone or desktop</strong><small>Browse · choose · control</small></div>
+            <p class="connection-line">Playback commands <span aria-hidden="true">↓</span></p>
+            <div class="device-card playback-device"><span aria-hidden="true">▣</span><strong>Your Naviamp player</strong><small>Android · desktop · Android TV</small></div>
+            <p class="connection-line"><span aria-hidden="true">↑</span> Music streams directly</p>
+            <div class="server-pill">Your music server</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Pick the player. Keep the familiar controls.</h2>
+          </div>
+          <div class="quick-grid">
+            <article>
+              <h3>Control the listening</h3>
+              <p>Play, pause, skip, seek, and use supported repeat and shuffle controls from the device in your hand.</p>
+            </article>
+            <article>
+              <h3>Shape what comes next</h3>
+              <p>Select queued tracks, use Play Next, reorder or remove items, and start music through the familiar browsing interface.</p>
+            </article>
+            <article>
+              <h3>Move the queue</h3>
+              <p>Transfer a listening session between compatible sources on paired devices, with the queue and playback position carried across.</p>
+            </article>
+            <article>
+              <h3>Pair once</h3>
+              <p>Use the pairing code and approval flow. Trusted devices can reconnect without starting the pairing process again.</p>
+            </article>
+            <article>
+              <h3>Leave the player playing</h3>
+              <p>Stop controlling a device without forgetting it. The playback device owns its stream and queue.</p>
+            </article>
+            <article>
+              <h3>Find it across a Tailnet</h3>
+              <p>Enter a reachable host and port when local discovery cannot cross your network. The normal pairing and identity checks still apply.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>From two devices to one listening session.</h2>
+          </div>
+          <ol class="setup-steps">
+            <li>
+              <h3>Open both players</h3>
+              <p>Use compatible Naviamp versions on reachable Android or desktop devices. Connect the playback device to the music source it will play.</p>
+            </li>
+            <li>
+              <h3>Pair in Controllers</h3>
+              <p>Open Settings → Controllers, find the other device, and follow the pairing-code and approval steps.</p>
+            </li>
+            <li>
+              <h3>Choose where to listen</h3>
+              <p>Select the paired player and start music. Its own Naviamp instance handles playback while you control the session.</p>
+            </li>
+          </ol>
+          <p><a href="https://github.com/goosepod/naviamp/blob/main/docs/connect-manual-tailnet.md">Read manual-address and Tailnet setup →</a></p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container reading-copy">
+          <h2>What needs to be reachable?</h2>
+          <p>The controller must be able to reach the playback device, and the playback device must be able to reach the music server. Automatic discovery works on the local network; a routed network may need manual pairing and suitable network permissions.</p>
+          <p>Queue handoff needs a compatible music source on the receiving device. Pairing can also offer an existing connection to help set up another player, with the required approval.</p>
+          <p>Connect has no hosted internet relay and needs no separate Naviamp account. Google Cast is a separate output option for compatible receivers. Connect remains beta while broader device and recovery testing continues.</p>
+          <p><a href="https://github.com/goosepod/naviamp/releases/tag/v2.6.0">Connect launch and compatibility notes</a> · <a href="https://github.com/goosepod/naviamp/releases/tag/v2.8.0">Manual Tailnet pairing release</a></p>
+        </div>
+      </section>
+
+      <section class="section page-cta">
+        <div class="container">
+          <h2>Make yourself at home in your music.</h2>
+          <div class="hero-actions"><a class="primary-button" href="/naviamp/#downloads">Download Naviamp →</a><a href="/naviamp/features/">Browse all features</a></div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container"><a class="site-name" href="/">Naviamp by GoosePod</a>
+        <nav class="feature-footer" aria-label="Explore Naviamp"><a href="/naviamp/features/">All features</a><a href="/naviamp/discovery/">Discovery &amp; radio</a><a href="/naviamp/smart-playlists/">Smart Playlists</a><a href="/naviamp/connect/">Naviamp Connect</a><a href="/naviamp/appearance/">Appearance</a><a href="/naviamp/compatibility/">Compatibility</a><a href="/naviamp/privacy/">Privacy</a><a href="https://github.com/goosepod/naviamp">GitHub</a><a href="https://discord.gg/7dd9954VGd">Discord</a></nav>
+      </div>
+    </footer>
+  </body>
+</html>

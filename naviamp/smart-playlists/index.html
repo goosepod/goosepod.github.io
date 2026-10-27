@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Create native Navidrome Smart Playlists with templates, nested rules, sorting, limits, JSON import, and supported local previews.">
+    <meta name="theme-color" content="#fafaf7">
+    <meta property="og:title" content="Smart Playlists — Naviamp">
+    <meta property="og:description" content="Create native Navidrome Smart Playlists with templates, nested rules, sorting, limits, JSON import, and supported local previews.">
+    <meta property="og:image" content="https://goosepod.com/assets/naviamp/social-preview.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://goosepod.com/naviamp/smart-playlists/">
+    <title>Smart Playlists — Naviamp</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/naviamp/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/naviamp/apple-touch-icon.png">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/naviamp/website.css">
+  </head>
+  <body class="naviamp-site"><a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="site-nav container" aria-label="Primary navigation"><a class="site-name product-brand" href="/naviamp/"><img src="/assets/naviamp/icon.svg" width="32" height="32" alt="">Naviamp</a>
+        <div class="nav-links"><a href="/naviamp/features/">Features</a><a href="/naviamp/connect/">Connect</a><a href="/naviamp/#player-sizes">Player sizes</a><a href="/naviamp/#screenshots">Screenshots</a><a href="/naviamp/#help">Help</a><a href="/naviamp/#downloads">Download</a></div>
+      <div class="header-socials" aria-label="Naviamp community"><a class="social-icon" href="https://discord.gg/7dd9954VGd" aria-label="Join Naviamp on Discord" title="Discord"><img src="/assets/social/discord.svg" width="22" height="22" alt=""></a><a class="social-icon" href="https://github.com/goosepod/naviamp" aria-label="Naviamp on GitHub" title="GitHub"><img src="/assets/social/github.svg" width="22" height="22" alt=""></a></div>
+</nav>
+    </header>
+    <main id="main">
+
+      <section class="container feature-intro"><a href="/naviamp/">← Back to Naviamp</a>
+        <p class="eyebrow">Smart Playlists · Navidrome</p>
+        <h1>Your taste.<br>Your rules.</h1>
+        <p class="lead">Keep finding the music you want without rebuilding the same playlist by hand.</p>
+      </section>
+
+      <section class="section">
+        <div class="container detail-split">
+          <div class="reading-copy">
+            <h2>A playlist that keeps finding the right music.</h2>
+            <p>Set the rules once and let Navidrome return the tracks that match. As you add music, listen, rate, and favorite, the results can change with your library.</p>
+            <p>Start from a built-in template or make your own. Combine conditions with groups, choose how to sort the results, and set a limit for the session you have in mind.</p>
+            <p class="requirement">Native Smart Playlist creation and editing require Navidrome’s native API and suitable account permissions. Ordinary playlists remain available on other providers where supported.</p>
+          </div>
+          <div class="rule-example">
+            <p class="eyebrow">Example Smart Playlist</p>
+            <h3>Fresh finds, still unheard.</h3>
+            <dl>
+              <div>
+                <dt>Added to your library</dt>
+                <dd>In the last 90 days</dd>
+              </div>
+              <div>
+                <dt>Play count</dt>
+                <dd>Zero</dd>
+              </div>
+              <div>
+                <dt>Order</dt>
+                <dd>Newest additions first</dd>
+              </div>
+            </dl>
+            <p>Rules keep finding matching music as your library changes.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Start with something you already want to hear.</h2>
+          </div>
+          <div class="quick-grid">
+            <article>
+              <h3>Recently Played</h3>
+              <p>Tracks you’ve played in the last 30 days.</p>
+            </article>
+            <article>
+              <h3>Never Played</h3>
+              <p>Give unheard music a turn, in random order.</p>
+            </article>
+            <article>
+              <h3>High Rated</h3>
+              <p>Bring together four-star-or-better tracks.</p>
+            </article>
+            <article>
+              <h3>Favorite Albums</h3>
+              <p>A session drawn from the albums you love.</p>
+            </article>
+            <article>
+              <h3>Recently Added but Unplayed</h3>
+              <p>Catch up with new additions that haven’t had their first play.</p>
+            </article>
+            <article>
+              <h3>Long-Unheard Favorites</h3>
+              <p>Return to loved tracks you haven’t played in six months.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container detail-split">
+          <div class="reading-copy">
+            <h2>Simple to start. Room to go deeper.</h2>
+            <ul>
+              <li>Combine filters and nested rule groups.</li>
+              <li>Target one or several music libraries.</li>
+              <li>Apply multiple sorts and result limits.</li>
+              <li>Import an existing NSP JSON definition.</li>
+              <li>Preview supported rules against the synced library.</li>
+            </ul>
+            <p>The local preview depends on the fields Naviamp has indexed. If a field cannot be evaluated locally, the editor explains that limitation; your server remains responsible for the playlist’s results.</p>
+            <p><a href="/naviamp/features/#playlists">See regular playlists and queue features →</a></p>
+          </div>
+          <figure>
+            <button type="button" class="screenshot-trigger" command="show-modal" commandfor="shot-smart-playlist-templates" aria-label="Enlarge screenshot: Naviamp Smart Playlist editor showing built-in templates while connected to the Navidrome demo server"><img loading="lazy" src="/assets/naviamp/smart-playlist-templates.jpg" alt="Naviamp Smart Playlist editor showing built-in templates while connected to the Navidrome demo server" width="1281" height="913"></button>
+            <a class="original-image-link" href="/assets/naviamp/smart-playlist-templates.jpg">Open image directly</a>
+            <figcaption>The real template chooser, captured from an unsaved draft on the demo connection.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section page-cta">
+        <div class="container">
+          <h2>Make yourself at home in your music.</h2>
+          <div class="hero-actions"><a class="primary-button" href="/naviamp/#downloads">Download Naviamp →</a><a href="/naviamp/features/">Browse all features</a></div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container"><a class="site-name" href="/">Naviamp by GoosePod</a>
+        <nav class="feature-footer" aria-label="Explore Naviamp"><a href="/naviamp/features/">All features</a><a href="/naviamp/discovery/">Discovery &amp; radio</a><a href="/naviamp/smart-playlists/">Smart Playlists</a><a href="/naviamp/connect/">Naviamp Connect</a><a href="/naviamp/appearance/">Appearance</a><a href="/naviamp/compatibility/">Compatibility</a><a href="/naviamp/privacy/">Privacy</a><a href="https://github.com/goosepod/naviamp">GitHub</a><a href="https://discord.gg/7dd9954VGd">Discord</a></nav>
+      </div>
+    </footer>
+    <dialog class="screenshot-dialog" id="shot-smart-playlist-templates" aria-labelledby="shot-smart-playlist-templates-caption" closedby="any">
+      <form method="dialog">
+        <button type="submit" autofocus>Close screenshot <span aria-hidden="true">×</span></button>
+      </form>
+      <figure><img loading="lazy" src="/assets/naviamp/smart-playlist-templates.jpg" alt="Naviamp Smart Playlist editor showing built-in templates while connected to the Navidrome demo server" width="1281" height="913">
+        <figcaption id="shot-smart-playlist-templates-caption">Naviamp Smart Playlist editor showing built-in templates while connected to the Navidrome demo server <a href="/assets/naviamp/smart-playlist-templates.jpg">Open original image</a></figcaption>
+      </figure>
+    </dialog>
+  </body>
+</html>
