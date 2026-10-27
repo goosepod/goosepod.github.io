@@ -21,9 +21,8 @@
   <body class="naviamp-site">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <nav class="site-nav container" aria-label="Primary navigation">
-        <a class="site-name product-brand" href="/naviamp/"><img src="/assets/naviamp/icon.svg" width="32" height="32" alt="">Naviamp</a>
-        <div class="nav-links"><a href="#features">Features</a><a href="#player-sizes">Player sizes</a><a href="#screenshots">Screenshots</a><a href="#help">Help</a><a href="#downloads">Download</a></div>
+      <nav class="site-nav container" aria-label="Primary navigation"><a class="site-name product-brand" href="/naviamp/"><img src="/assets/naviamp/icon.svg" width="32" height="32" alt="">Naviamp</a>
+        <div class="nav-links"><a href="/naviamp/features/">Features</a><a href="/naviamp/connect/">Connect</a><a href="/naviamp/#player-sizes">Player sizes</a><a href="/naviamp/#screenshots">Screenshots</a><a href="/naviamp/#help">Help</a><a href="/naviamp/#downloads">Download</a></div>
       </nav>
     </header>
     <main id="main">
@@ -37,7 +36,9 @@
           <p class="hero-platforms">macOS · Windows · Linux · Android · iOS preview</p>
           <p class="hero-note">Open source. No ads or third-party tracking SDKs.</p>
         </div>
-        <figure class="hero-image"><a href="/assets/naviamp/player-full.jpg"><img src="/assets/naviamp/player-full.jpg" alt="Naviamp playing music from the Navidrome demo library, with colorful artwork, playback controls, and track details" width="1298" height="931"></a>
+        <figure class="hero-image">
+          <button type="button" class="screenshot-trigger" command="show-modal" commandfor="shot-player-full" aria-label="Enlarge screenshot: Naviamp playing music from the Navidrome demo library, with colorful artwork, playback controls, and track details"><img src="/assets/naviamp/player-full.jpg" alt="Naviamp playing music from the Navidrome demo library, with colorful artwork, playback controls, and track details" width="1298" height="931"></button>
+          <a class="original-image-link" href="/assets/naviamp/player-full.jpg">Open image directly</a>
           <figcaption>Your music takes center stage.</figcaption>
         </figure>
       </section>
@@ -69,6 +70,55 @@
         </div>
       </section>
 
+      <section class="section flagship" id="standout">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Make more of your music</p>
+            <h2>Playlists with a memory.<br>A player within reach.</h2>
+          </div>
+          <div class="flagship-grid">
+            <article class="flagship-card">
+              <p class="eyebrow">Smart Playlists · Navidrome</p>
+              <h3>Set the rules.<br>Let your library do the rest.</h3>
+              <p>New music you haven’t played. Favorites you haven’t heard in months. Build playlists that follow your collection with filters, nested rules, sorting, and limits.</p>
+              <div class="rule-example">
+                <p class="eyebrow">Example Smart Playlist</p>
+                <h3>Fresh finds, still unheard.</h3>
+                <dl>
+                  <div>
+                    <dt>Added to your library</dt>
+                    <dd>In the last 90 days</dd>
+                  </div>
+                  <div>
+                    <dt>Play count</dt>
+                    <dd>Zero</dd>
+                  </div>
+                  <div>
+                    <dt>Order</dt>
+                    <dd>Newest additions first</dd>
+                  </div>
+                </dl>
+                <p>Rules keep finding matching music as your library changes.</p>
+              </div>
+              <a class="text-link" href="/naviamp/smart-playlists/">Explore Smart Playlists →</a></article>
+            <article class="flagship-card connect-card">
+              <p class="eyebrow">Naviamp Connect · Beta</p>
+              <h3>Choose where it plays.<br>Keep control from your seat.</h3>
+              <p>Play music on your computer or Android TV while you browse and control the queue from another Naviamp device. Pair once, choose a player, and keep listening.</p>
+              <div class="connect-diagram" role="img" aria-label="Your phone or desktop sends playback commands to a paired Naviamp player. The music streams from your music server directly to the playback device.">
+                <div class="device-card"><span aria-hidden="true">▯</span><strong>Your phone or desktop</strong><small>Browse · choose · control</small></div>
+                <p class="connection-line">Playback commands <span aria-hidden="true">↓</span></p>
+                <div class="device-card playback-device"><span aria-hidden="true">▣</span><strong>Your Naviamp player</strong><small>Android · desktop · Android TV</small></div>
+                <p class="connection-line"><span aria-hidden="true">↑</span> Music streams directly</p>
+                <div class="server-pill">Your music server</div>
+              </div>
+              <a class="text-link" href="/naviamp/connect/">Meet Naviamp Connect →</a>
+              <p class="capability-note">Android and desktop. Devices need a reachable network connection.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="section stories" id="features">
         <div class="container">
           <div class="section-heading">
@@ -82,8 +132,10 @@
               <h3>Let one good track lead to another.</h3>
               <p>Build a listening session around artists, albums, or genres. Explore new combinations, edit the queue, and save a mix you want to hear again.</p>
               <p>Sonic Mix, Sonic Path, related tracks, and sonic autoplay go deeper when your server provides compatible similarity data.</p>
-              <a href="/naviamp/compatibility/#server-features">See discovery requirements →</a></div>
-            <figure><a href="/assets/naviamp/mix-builders.jpg"><img loading="lazy" src="/assets/naviamp/mix-builders.jpg" alt="Naviamp mix builders connected to the Navidrome demo library" width="1281" height="941"></a>
+              <a href="/naviamp/discovery/">Explore mixes, sonic discovery, and radio →</a></div>
+            <figure>
+              <button type="button" class="screenshot-trigger" command="show-modal" commandfor="shot-mix-builders" aria-label="Enlarge screenshot: Naviamp mix builders connected to the Navidrome demo library"><img loading="lazy" src="/assets/naviamp/mix-builders.jpg" alt="Naviamp mix builders connected to the Navidrome demo library" width="1281" height="941"></button>
+              <a class="original-image-link" href="/assets/naviamp/mix-builders.jpg">Open image directly</a>
               <figcaption>Start with music you love. Choose where it goes next.</figcaption>
             </figure>
           </article>
@@ -94,7 +146,9 @@
               <p>Gapless albums. Smooth crossfades. ReplayGain for a more consistent listening level. Shape playback with an equalizer, sample-rate controls, and album or playlist profiles.</p>
               <p>Keep waveform seeking, lyrics, track details, and your queue close at hand.</p>
               <a href="/naviamp/compatibility/#audio-formats">Explore audio support →</a></div>
-            <figure><a href="/assets/naviamp/player-full.jpg"><img loading="lazy" src="/assets/naviamp/player-full.jpg" alt="Naviamp full player with artwork and audio information, using the Navidrome demo library" width="1298" height="931"></a>
+            <figure>
+              <button type="button" class="screenshot-trigger" command="show-modal" commandfor="shot-player-full" aria-label="Enlarge screenshot: Naviamp full player with artwork and audio information, using the Navidrome demo library"><img loading="lazy" src="/assets/naviamp/player-full.jpg" alt="Naviamp full player with artwork and audio information, using the Navidrome demo library" width="1298" height="931"></button>
+              <a class="original-image-link" href="/assets/naviamp/player-full.jpg">Open image directly</a>
               <figcaption>Artwork, playback details, and controls for the song.</figcaption>
             </figure>
           </article>
@@ -105,11 +159,49 @@
               <p>Let album-art colors set the mood. Choose Aurora gradients, blur, or a solid background, then tune the metadata and layout to suit your screen.</p>
               <p>On desktop, reactive visualizers bring another dimension to listening.</p>
             </div>
-            <figure><a href="/assets/naviamp/personalization.jpg"><img loading="lazy" src="/assets/naviamp/personalization.jpg" alt="Naviamp player with a colorful album-inspired background from the Navidrome demo library" width="1281" height="941"></a>
-              <figcaption>Color and artwork that belong to the music.</figcaption>
+            <figure>
+              <button type="button" class="screenshot-trigger" command="show-modal" commandfor="shot-aurora-player" aria-label="Enlarge screenshot: Naviamp player with a colorful album-inspired background from the Navidrome demo library"><img loading="lazy" src="/assets/naviamp/aurora-player.jpg" alt="Naviamp player with a colorful album-inspired background from the Navidrome demo library" width="1281" height="941"></button>
+              <a class="original-image-link" href="/assets/naviamp/aurora-player.jpg">Open image directly</a>
+              <figcaption>Aurora draws its gradient from the music’s own colors. <a href="/naviamp/appearance/">Compare backgrounds →</a></figcaption>
             </figure>
           </article>
         </div>
+      </section>
+
+      <section class="section quick-features">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Built for the way you listen</p>
+            <h2>There’s a lot more in here.</h2>
+            <p>The everyday essentials and the tools that take you further.</p>
+          </div>
+          <div class="quick-grid">
+            <article>
+              <h3>Artist, Album &amp; Genre Mixes</h3>
+              <p>Choose the starting point for a session. Edit the result or save it as a playlist.</p>
+              <a href="/naviamp/discovery/#mix-builders">Explore mix builders →</a></article>
+            <article>
+              <h3>Internet radio</h3>
+              <p>Keep favorite stations alongside your albums, with live track information when a station provides it.</p>
+              <a href="/naviamp/discovery/#internet-radio">Tune in →</a></article>
+            <article>
+              <h3>Downloads that stay useful</h3>
+              <p>Take music offline and keep albums, artists, and playlists downloaded, with storage and cache controls.</p>
+              <a href="/naviamp/features/#offline">Offline features →</a></article>
+            <article>
+              <h3>Lyrics, in time</h3>
+              <p>Follow plain, line-synced, or enhanced lyrics when your source supplies them.</p>
+              <a href="/naviamp/features/#listening">Listening features →</a></article>
+            <article>
+              <h3>More places to play</h3>
+              <p>Android Auto, Android TV, desktop media controls, and Google Cast on Android and desktop.</p>
+              <a href="/naviamp/features/#devices">Devices and requirements →</a></article>
+            <article>
+              <h3>Room to make it yours</h3>
+              <p>Aurora, artwork blur, configurable metadata, waveforms, and reactive desktop visualizers.</p>
+              <a href="/naviamp/appearance/">See the different looks →</a></article>
+          </div>
+          <a class="text-link" href="/naviamp/features/">Browse the full feature list →</a></div>
       </section>
 
       <section class="section player-showcase" id="player-sizes">
@@ -120,38 +212,54 @@
             <p>Different sizes make room for different things. These are real Naviamp layouts, captured with the same demo track.</p>
           </div>
           <div class="showcase" data-showcase>
-            <div class="showcase-tabs" hidden aria-label="Player views"><button type="button" data-view="split">Split view</button><button type="button" data-view="full">Full player</button><button type="button" data-view="narrow">Narrow player</button><button type="button" data-view="compact">Compact player</button><button type="button" data-view="mini">Mini player</button></div>
+            <div class="showcase-tabs" hidden aria-label="Player views">
+              <button type="button" data-view="split">Split view</button>
+              <button type="button" data-view="full">Full player</button>
+              <button type="button" data-view="narrow">Narrow player</button>
+              <button type="button" data-view="compact">Compact player</button>
+              <button type="button" data-view="mini">Mini player</button>
+            </div>
             <div class="showcase-panels">
               <figure id="view-split" data-panel="split">
-                <div class="layout-image"><a href="/assets/naviamp/player-split.jpg"><img loading="lazy" src="/assets/naviamp/player-split.jpg" alt="Naviamp split view playing the same colorful demo album" width="1298" height="931"></a></div>
+                <div class="layout-image">
+                  <button type="button" class="screenshot-trigger" command="show-modal" commandfor="shot-player-split" aria-label="Enlarge screenshot: Naviamp split view playing the same colorful demo album"><img loading="lazy" src="/assets/naviamp/player-split.jpg" alt="Naviamp split view playing the same colorful demo album" width="1298" height="931"></button>
+                  <a class="original-image-link" href="/assets/naviamp/player-split.jpg">Open image directly</a></div>
                 <figcaption><span class="eyebrow">Split view</span>
                   <h3>Browse without losing the player.</h3>
                   <p>Artwork, track details, and playback controls stay beside your library. Use the other pane to browse or search while you listen.</p>
                 </figcaption>
               </figure>
               <figure id="view-full" data-panel="full">
-                <div class="layout-image"><a href="/assets/naviamp/player-full.jpg"><img loading="lazy" src="/assets/naviamp/player-full.jpg" alt="Naviamp full player playing the same colorful demo album" width="1298" height="931"></a></div>
+                <div class="layout-image">
+                  <button type="button" class="screenshot-trigger" command="show-modal" commandfor="shot-player-full" aria-label="Enlarge screenshot: Naviamp full player playing the same colorful demo album"><img loading="lazy" src="/assets/naviamp/player-full.jpg" alt="Naviamp full player playing the same colorful demo album" width="1298" height="931"></button>
+                  <a class="original-image-link" href="/assets/naviamp/player-full.jpg">Open image directly</a></div>
                 <figcaption><span class="eyebrow">Full player</span>
                   <h3>Make room for the listening session.</h3>
                   <p>Give Now Playing the window. Large artwork and track details sit beside playback controls, ratings, volume, and a waveform across the bottom.</p>
                 </figcaption>
               </figure>
               <figure id="view-narrow" data-panel="narrow">
-                <div class="layout-image"><a href="/assets/naviamp/player-narrow.jpg"><img loading="lazy" src="/assets/naviamp/player-narrow.jpg" alt="Naviamp narrow player playing the same colorful demo album" width="320" height="733"></a></div>
+                <div class="layout-image">
+                  <button type="button" class="screenshot-trigger" command="show-modal" commandfor="shot-player-narrow" aria-label="Enlarge screenshot: Naviamp narrow player playing the same colorful demo album"><img loading="lazy" src="/assets/naviamp/player-narrow.jpg" alt="Naviamp narrow player playing the same colorful demo album" width="320" height="733"></button>
+                  <a class="original-image-link" href="/assets/naviamp/player-narrow.jpg">Open image directly</a></div>
                 <figcaption><span class="eyebrow">Narrow player</span>
                   <h3>Keep the song in focus.</h3>
                   <p>Artwork, song details, ratings, and audio information stack above transport controls and volume. Scroll for the queue, or open lyrics when available.</p>
                 </figcaption>
               </figure>
               <figure id="view-compact" data-panel="compact">
-                <div class="layout-image"><a href="/assets/naviamp/compact-now-playing.jpg"><img loading="lazy" src="/assets/naviamp/compact-now-playing.jpg" alt="Naviamp compact player playing the same colorful demo album" width="320" height="500"></a></div>
+                <div class="layout-image">
+                  <button type="button" class="screenshot-trigger" command="show-modal" commandfor="shot-compact-now-playing" aria-label="Enlarge screenshot: Naviamp compact player playing the same colorful demo album"><img loading="lazy" src="/assets/naviamp/compact-now-playing.jpg" alt="Naviamp compact player playing the same colorful demo album" width="320" height="500"></button>
+                  <a class="original-image-link" href="/assets/naviamp/compact-now-playing.jpg">Open image directly</a></div>
                 <figcaption><span class="eyebrow">Compact player</span>
                   <h3>The essentials, close at hand.</h3>
                   <p>Smaller artwork leaves room for the song, waveform, ratings, and transport controls. Audio details share one row; the volume slider gives way to the shorter layout.</p>
                 </figcaption>
               </figure>
               <figure id="view-mini" data-panel="mini">
-                <div class="layout-image"><a href="/assets/naviamp/player-mini.jpg"><img loading="lazy" src="/assets/naviamp/player-mini.jpg" alt="Naviamp mini player playing the same colorful demo album" width="320" height="733"></a></div>
+                <div class="layout-image">
+                  <button type="button" class="screenshot-trigger" command="show-modal" commandfor="shot-player-mini" aria-label="Enlarge screenshot: Naviamp mini player playing the same colorful demo album"><img loading="lazy" src="/assets/naviamp/player-mini.jpg" alt="Naviamp mini player playing the same colorful demo album" width="320" height="733"></button>
+                  <a class="original-image-link" href="/assets/naviamp/player-mini.jpg">Open image directly</a></div>
                 <figcaption><span class="eyebrow">Mini player</span>
                   <h3>Keep browsing. Keep listening.</h3>
                   <p>Return to your library with a small playback bar. Artwork, track identity, and previous, play/pause, and next controls remain visible; open Now Playing for the full view.</p>
@@ -168,28 +276,36 @@
           <div class="section-heading">
             <p class="eyebrow">Inside Naviamp</p>
             <h2>Your library, from every angle.</h2>
-            <p>Select any screenshot to see it at full size.</p>
+            <p>Select any screenshot to take a closer look.</p>
           </div>
           <div class="tour-grid">
-            <figure><a href="/assets/naviamp/library-artists.jpg"><img loading="lazy" src="/assets/naviamp/library-artists.jpg" alt="Explore your artists in Naviamp, connected to the Navidrome demo server" width="1281" height="941"></a>
+            <figure>
+              <button type="button" class="screenshot-trigger" command="show-modal" commandfor="shot-library-artists" aria-label="Enlarge screenshot: Explore your artists in Naviamp, connected to the Navidrome demo server"><img loading="lazy" src="/assets/naviamp/library-artists.jpg" alt="Explore your artists in Naviamp, connected to the Navidrome demo server" width="1281" height="941"></button>
+              <a class="original-image-link" href="/assets/naviamp/library-artists.jpg">Open image directly</a>
               <figcaption>
                 <h3>Explore your artists</h3>
                 <p>Artist portraits and your library, ready to browse.</p>
               </figcaption>
             </figure>
-            <figure><a href="/assets/naviamp/artist-detail.jpg"><img loading="lazy" src="/assets/naviamp/artist-detail.jpg" alt="Explore a discography in Naviamp, connected to the Navidrome demo server" width="1281" height="941"></a>
+            <figure>
+              <button type="button" class="screenshot-trigger" command="show-modal" commandfor="shot-artist-detail" aria-label="Enlarge screenshot: Explore a discography in Naviamp, connected to the Navidrome demo server"><img loading="lazy" src="/assets/naviamp/artist-detail.jpg" alt="Explore a discography in Naviamp, connected to the Navidrome demo server" width="1281" height="941"></button>
+              <a class="original-image-link" href="/assets/naviamp/artist-detail.jpg">Open image directly</a>
               <figcaption>
                 <h3>Explore a discography</h3>
                 <p>Albums and top tracks bring an artist’s catalog together.</p>
               </figcaption>
             </figure>
-            <figure><a href="/assets/naviamp/offline-downloads.jpg"><img loading="lazy" src="/assets/naviamp/offline-downloads.jpg" alt="Take music with you in Naviamp, connected to the Navidrome demo server" width="1281" height="941"></a>
+            <figure>
+              <button type="button" class="screenshot-trigger" command="show-modal" commandfor="shot-offline-downloads" aria-label="Enlarge screenshot: Take music with you in Naviamp, connected to the Navidrome demo server"><img loading="lazy" src="/assets/naviamp/offline-downloads.jpg" alt="Take music with you in Naviamp, connected to the Navidrome demo server" width="1281" height="941"></button>
+              <a class="original-image-link" href="/assets/naviamp/offline-downloads.jpg">Open image directly</a>
               <figcaption>
                 <h3>Take music with you</h3>
                 <p>Manage downloads for listening away from your server.</p>
               </figcaption>
             </figure>
-            <figure><a href="/assets/naviamp/album-detail.jpg"><img loading="lazy" src="/assets/naviamp/album-detail.jpg" alt="Inside an album in Naviamp, connected to the Navidrome demo server" width="1281" height="941"></a>
+            <figure>
+              <button type="button" class="screenshot-trigger" command="show-modal" commandfor="shot-album-detail" aria-label="Enlarge screenshot: Inside an album in Naviamp, connected to the Navidrome demo server"><img loading="lazy" src="/assets/naviamp/album-detail.jpg" alt="Inside an album in Naviamp, connected to the Navidrome demo server" width="1281" height="941"></button>
+              <a class="original-image-link" href="/assets/naviamp/album-detail.jpg">Open image directly</a>
               <figcaption>
                 <h3>Inside an album</h3>
                 <p>Track listings, album actions, and playback in one place.</p>
@@ -328,8 +444,97 @@
       </section>
     </main>
     <footer class="site-footer">
-      <div class="container footer-row"><span>Naviamp by <a href="/">GoosePod</a></span>
-        <div class="footer-links"><a href="/naviamp/compatibility/">Compatibility</a><a href="/naviamp/privacy/">Privacy</a><a href="https://github.com/goosepod/naviamp">GitHub</a><a href="https://discord.gg/7dd9954VGd">Discord</a></div>
+      <div class="container"><a class="site-name" href="/">Naviamp by GoosePod</a>
+        <nav class="feature-footer" aria-label="Explore Naviamp"><a href="/naviamp/features/">All features</a><a href="/naviamp/discovery/">Discovery &amp; radio</a><a href="/naviamp/smart-playlists/">Smart Playlists</a><a href="/naviamp/connect/">Naviamp Connect</a><a href="/naviamp/appearance/">Appearance</a><a href="/naviamp/compatibility/">Compatibility</a><a href="/naviamp/privacy/">Privacy</a><a href="https://github.com/goosepod/naviamp">GitHub</a><a href="https://discord.gg/7dd9954VGd">Discord</a></nav>
       </div>
     </footer>
-</body></html>
+    <dialog class="screenshot-dialog" id="shot-player-full" aria-labelledby="shot-player-full-caption" closedby="any">
+      <form method="dialog">
+        <button type="submit" autofocus>Close screenshot <span aria-hidden="true">×</span></button>
+      </form>
+      <figure><img loading="lazy" src="/assets/naviamp/player-full.jpg" alt="Naviamp full player playing the same colorful demo album" width="1298" height="931">
+        <figcaption id="shot-player-full-caption">Naviamp full player playing the same colorful demo album <a href="/assets/naviamp/player-full.jpg">Open original image</a></figcaption>
+      </figure>
+    </dialog>
+    <dialog class="screenshot-dialog" id="shot-mix-builders" aria-labelledby="shot-mix-builders-caption" closedby="any">
+      <form method="dialog">
+        <button type="submit" autofocus>Close screenshot <span aria-hidden="true">×</span></button>
+      </form>
+      <figure><img loading="lazy" src="/assets/naviamp/mix-builders.jpg" alt="Naviamp mix builders connected to the Navidrome demo library" width="1281" height="941">
+        <figcaption id="shot-mix-builders-caption">Naviamp mix builders connected to the Navidrome demo library <a href="/assets/naviamp/mix-builders.jpg">Open original image</a></figcaption>
+      </figure>
+    </dialog>
+    <dialog class="screenshot-dialog" id="shot-aurora-player" aria-labelledby="shot-aurora-player-caption" closedby="any">
+      <form method="dialog">
+        <button type="submit" autofocus>Close screenshot <span aria-hidden="true">×</span></button>
+      </form>
+      <figure><img loading="lazy" src="/assets/naviamp/aurora-player.jpg" alt="Naviamp player with a colorful album-inspired background from the Navidrome demo library" width="1281" height="941">
+        <figcaption id="shot-aurora-player-caption">Naviamp player with a colorful album-inspired background from the Navidrome demo library <a href="/assets/naviamp/aurora-player.jpg">Open original image</a></figcaption>
+      </figure>
+    </dialog>
+    <dialog class="screenshot-dialog" id="shot-player-split" aria-labelledby="shot-player-split-caption" closedby="any">
+      <form method="dialog">
+        <button type="submit" autofocus>Close screenshot <span aria-hidden="true">×</span></button>
+      </form>
+      <figure><img loading="lazy" src="/assets/naviamp/player-split.jpg" alt="Naviamp split view playing the same colorful demo album" width="1298" height="931">
+        <figcaption id="shot-player-split-caption">Naviamp split view playing the same colorful demo album <a href="/assets/naviamp/player-split.jpg">Open original image</a></figcaption>
+      </figure>
+    </dialog>
+    <dialog class="screenshot-dialog" id="shot-player-narrow" aria-labelledby="shot-player-narrow-caption" closedby="any">
+      <form method="dialog">
+        <button type="submit" autofocus>Close screenshot <span aria-hidden="true">×</span></button>
+      </form>
+      <figure><img loading="lazy" src="/assets/naviamp/player-narrow.jpg" alt="Naviamp narrow player playing the same colorful demo album" width="320" height="733">
+        <figcaption id="shot-player-narrow-caption">Naviamp narrow player playing the same colorful demo album <a href="/assets/naviamp/player-narrow.jpg">Open original image</a></figcaption>
+      </figure>
+    </dialog>
+    <dialog class="screenshot-dialog" id="shot-compact-now-playing" aria-labelledby="shot-compact-now-playing-caption" closedby="any">
+      <form method="dialog">
+        <button type="submit" autofocus>Close screenshot <span aria-hidden="true">×</span></button>
+      </form>
+      <figure><img loading="lazy" src="/assets/naviamp/compact-now-playing.jpg" alt="Naviamp compact player playing the same colorful demo album" width="320" height="500">
+        <figcaption id="shot-compact-now-playing-caption">Naviamp compact player playing the same colorful demo album <a href="/assets/naviamp/compact-now-playing.jpg">Open original image</a></figcaption>
+      </figure>
+    </dialog>
+    <dialog class="screenshot-dialog" id="shot-player-mini" aria-labelledby="shot-player-mini-caption" closedby="any">
+      <form method="dialog">
+        <button type="submit" autofocus>Close screenshot <span aria-hidden="true">×</span></button>
+      </form>
+      <figure><img loading="lazy" src="/assets/naviamp/player-mini.jpg" alt="Naviamp mini player playing the same colorful demo album" width="320" height="733">
+        <figcaption id="shot-player-mini-caption">Naviamp mini player playing the same colorful demo album <a href="/assets/naviamp/player-mini.jpg">Open original image</a></figcaption>
+      </figure>
+    </dialog>
+    <dialog class="screenshot-dialog" id="shot-library-artists" aria-labelledby="shot-library-artists-caption" closedby="any">
+      <form method="dialog">
+        <button type="submit" autofocus>Close screenshot <span aria-hidden="true">×</span></button>
+      </form>
+      <figure><img loading="lazy" src="/assets/naviamp/library-artists.jpg" alt="Explore your artists in Naviamp, connected to the Navidrome demo server" width="1281" height="941">
+        <figcaption id="shot-library-artists-caption">Explore your artists in Naviamp, connected to the Navidrome demo server <a href="/assets/naviamp/library-artists.jpg">Open original image</a></figcaption>
+      </figure>
+    </dialog>
+    <dialog class="screenshot-dialog" id="shot-artist-detail" aria-labelledby="shot-artist-detail-caption" closedby="any">
+      <form method="dialog">
+        <button type="submit" autofocus>Close screenshot <span aria-hidden="true">×</span></button>
+      </form>
+      <figure><img loading="lazy" src="/assets/naviamp/artist-detail.jpg" alt="Explore a discography in Naviamp, connected to the Navidrome demo server" width="1281" height="941">
+        <figcaption id="shot-artist-detail-caption">Explore a discography in Naviamp, connected to the Navidrome demo server <a href="/assets/naviamp/artist-detail.jpg">Open original image</a></figcaption>
+      </figure>
+    </dialog>
+    <dialog class="screenshot-dialog" id="shot-offline-downloads" aria-labelledby="shot-offline-downloads-caption" closedby="any">
+      <form method="dialog">
+        <button type="submit" autofocus>Close screenshot <span aria-hidden="true">×</span></button>
+      </form>
+      <figure><img loading="lazy" src="/assets/naviamp/offline-downloads.jpg" alt="Take music with you in Naviamp, connected to the Navidrome demo server" width="1281" height="941">
+        <figcaption id="shot-offline-downloads-caption">Take music with you in Naviamp, connected to the Navidrome demo server <a href="/assets/naviamp/offline-downloads.jpg">Open original image</a></figcaption>
+      </figure>
+    </dialog>
+    <dialog class="screenshot-dialog" id="shot-album-detail" aria-labelledby="shot-album-detail-caption" closedby="any">
+      <form method="dialog">
+        <button type="submit" autofocus>Close screenshot <span aria-hidden="true">×</span></button>
+      </form>
+      <figure><img loading="lazy" src="/assets/naviamp/album-detail.jpg" alt="Inside an album in Naviamp, connected to the Navidrome demo server" width="1281" height="941">
+        <figcaption id="shot-album-detail-caption">Inside an album in Naviamp, connected to the Navidrome demo server <a href="/assets/naviamp/album-detail.jpg">Open original image</a></figcaption>
+      </figure>
+    </dialog>
+  </body>
+</html>

@@ -40,3 +40,14 @@ All website app screenshots use Naviamp 2.9.0 connected to the public Navidrome 
 See [screenshot provenance and verification](docs/naviamp-website-verification.md) before refreshing
 assets. Keep the release highlight tied to a public release and update its versioned link together
 with its description.
+
+The feature directory at `/naviamp/features/` links to discovery/radio, Smart Playlists, Connect,
+and appearance pages. These detail pages contain no JavaScript. Connect copy must preserve the
+current Android/desktop beta scope and network requirements; Smart Playlist copy must distinguish
+Navidrome-native editing from regular playlists and explain limits of local preview.
+
+Screenshot buttons use native HTML `commandfor`/`command="show-modal"` and `<dialog closedby="any">`.
+The browser owns modal focus, Escape, and dismissal; an ordinary `method="dialog"` form closes it.
+There is **no screenshot JavaScript**. An always-visible **Open image directly** link is the fallback
+for browsers without invoker commands and opens the original in the same tab; Back returns to the
+site. Preserve these links rather than adding a gallery runtime or nesting interactive controls.

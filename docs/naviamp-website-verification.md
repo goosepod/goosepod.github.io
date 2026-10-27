@@ -27,6 +27,9 @@ adult-themed album and artist when refreshing images.
 | offline-downloads.jpg | Downloaded demo track | 1281 × 941 |
 | personalization.jpg | Full player with Spring artwork colors | 1281 × 941 |
 | social-preview.jpg | Same capture as player-full.jpg | 1298 × 931 |
+| aurora-player.jpg | Full player with Aurora, same Spring track | 1281 × 941 |
+| aurora-settings.jpg | Aurora selected, three colors, 45°, Balanced | 1281 × 941 |
+| smart-playlist-templates.jpg | Unsaved Smart Playlist draft, demo connection | 1281 × 913 |
 
 The demo does not advertise sonic similarity. The discovery screenshot shows an available genre
 builder; homepage copy separately explains the requirements for Sonic Mix and Sonic Path. The
@@ -49,3 +52,27 @@ public demo's content and configuration can change.
   containers, and the underlying rows must match the previous homepage tables.
 - Check local links, fragment targets, unique IDs, image signatures/dimensions, missing assets,
   and `git diff --check` before committing.
+
+## Expanded features and native screenshot dialogs
+
+The Smart Playlist capture shows the actual template chooser on the demo connection. The draft was
+canceled, without creating a playlist on the public server. The homepage example rule card is a
+labeled illustration of the Recently Added but Unplayed template, not a fabricated app screenshot.
+Aurora and Album Blur images show the same Spring artwork with their real settings. The Connect
+illustration explains command and media flow; it does not claim to show a live paired-device capture.
+
+- Review the homepage feature highlights and all five new detail pages at desktop and phone widths.
+- Open a screenshot, check the close button, Escape, outside-click dismissal where supported, and
+  return of focus to the invoking button. Native modal behavior is supplied by the browser.
+- Follow **Open image directly**, confirm the image opens in the same tab, and use Back to return.
+- Test with page scripts blocked: native dialogs should still work on supporting browsers; all five
+  player figures, download cards, and ordinary links remain available. Older browsers can use the
+  direct-image links. No screenshot script or gallery dependency is shipped.
+- Check Smart Playlist provider/preview requirements, Connect beta/platform/network limits, and
+  sonic-discovery requirements against the app README and published 2.6/2.8/2.9 release notes.
+
+Verification on October 27, 2026: Chrome checked at 390 × 844 and desktop size, with page scripts
+blocked by a local preview-only Content Security Policy for the no-JavaScript check. Native opening,
+close button, backdrop click, Escape, and direct-image/Back navigation passed. Each new feature page
+fit the phone viewport without horizontal page overflow. This does not substitute for testing older
+browser engines; their documented fallback is the ordinary direct-image link.
