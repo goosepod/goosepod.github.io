@@ -1,230 +1,335 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Naviamp is a modern music player for Navidrome, Subsonic and OpenSubsonic servers, Jellyfin, and Bandcamp.">
-  <meta name="theme-color" content="#fafaf7">
-  <meta property="og:title" content="Naviamp — Your music, wherever it lives">
-  <meta property="og:description" content="Browse, discover, queue, download, and play music from Navidrome, Subsonic, Jellyfin, and Bandcamp.">
-  <meta property="og:image" content="https://goosepod.com/assets/naviamp/social-preview.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://goosepod.com/naviamp/">
-  <title>Naviamp — Your music, wherever it lives</title>
-  <link rel="icon" type="image/png" sizes="64x64" href="/assets/naviamp/favicon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/naviamp/apple-touch-icon.png">
-  <link rel="stylesheet" href="/styles.css">
-  <script type="module" src="/naviamp/downloads.mjs"></script>
-</head>
-<body>
-  <header class="site-header">
-    <nav class="site-nav container" aria-label="Primary navigation">
-      <a class="site-name" href="/">GoosePod</a>
-      <div class="nav-links">
-        <a href="/naviamp/" aria-current="page">Naviamp</a>
-        <a href="/audiomuse-fingerprint/">Sonic Fingerprint</a>
-        <a href="/feedss/">feedss</a>
-        <a href="https://github.com/goosepod/naviamp">GitHub</a>
-      </div>
-    </nav>
-  </header>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Naviamp is a modern music player for Navidrome, Subsonic and OpenSubsonic servers, Jellyfin, and Bandcamp.">
+    <meta name="theme-color" content="#fafaf7">
+    <meta property="og:title" content="Naviamp — Your music, wherever it lives">
+    <meta property="og:description" content="Browse, discover, queue, download, and play music from Navidrome, Subsonic, Jellyfin, and Bandcamp.">
+    <meta property="og:image" content="https://goosepod.com/assets/naviamp/social-preview.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://goosepod.com/naviamp/">
+    <title>Naviamp — Your music, wherever it lives</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/naviamp/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/naviamp/apple-touch-icon.png">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/naviamp/website.css">
+    <script type="module" src="/naviamp/showcase.mjs"></script>
+    <script type="module" src="/naviamp/downloads.mjs"></script>
+  </head>
+  <body class="naviamp-site">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="site-nav container" aria-label="Primary navigation">
+        <a class="site-name product-brand" href="/naviamp/"><img src="/assets/naviamp/icon.svg" width="32" height="32" alt="">Naviamp</a>
+        <div class="nav-links"><a href="#features">Features</a><a href="#player-sizes">Player sizes</a><a href="#screenshots">Screenshots</a><a href="#help">Help</a><a href="#downloads">Download</a></div>
+      </nav>
+    </header>
+    <main id="main">
 
-  <main>
-    <section class="product-intro container">
-      <img src="/assets/naviamp/icon.svg" alt="Naviamp app icon">
-      <div>
-        <p class="product-status">Open-source music player</p>
-        <h1>Your music,<br>wherever it lives.</h1>
-        <p class="intro">Connect Navidrome, another Subsonic or OpenSubsonic server, Jellyfin, or your Bandcamp collection. Naviamp turns it into one polished library for browsing, discovery, playlists, radio, downloads, and playback.</p>
-        <div class="meta-list" aria-label="Supported platforms"><span>macOS</span><span>Windows</span><span>Linux</span><span>Android</span><span>iOS preview</span></div>
-        <div class="inline-links"><a href="#downloads">Download Naviamp</a><a href="https://github.com/goosepod/naviamp">Source code</a><a href="https://discord.gg/7dd9954VGd">Join us on Discord</a></div>
-      </div>
-    </section>
+      <section class="product-hero container">
+        <div class="hero-copy">
+          <p class="eyebrow">Your collection. A whole new way to listen.</p>
+          <h1>Your music,<br>wherever it lives.</h1>
+          <p class="hero-description">Bring your Navidrome, Subsonic, Jellyfin, or Bandcamp collection to a player made for exploring, listening, and making it yours.</p>
+          <div class="hero-actions"><a class="primary-button" href="#downloads">Download Naviamp <span aria-hidden="true">↗</span></a><a href="#player-sizes">Find your listening view →</a></div>
+          <p class="hero-platforms">macOS · Windows · Linux · Android · iOS preview</p>
+          <p class="hero-note">Open source. No ads or third-party tracking SDKs.</p>
+        </div>
+        <figure class="hero-image"><a href="/assets/naviamp/player-full.jpg"><img src="/assets/naviamp/player-full.jpg" alt="Naviamp playing music from the Navidrome demo library, with colorful artwork, playback controls, and track details" width="1298" height="931"></a>
+          <figcaption>Your music takes center stage.</figcaption>
+        </figure>
+      </section>
 
-    <section class="section download-section" id="downloads" aria-labelledby="downloads-title">
-      <div class="container">
-        <div class="section-title"><h2 id="downloads-title">Download Naviamp</h2><p>Your music, on your device.</p></div>
-        <div class="download-picker" id="download-picker" hidden>
-          <label for="download-platform">Choose your platform</label>
-          <select id="download-platform" aria-describedby="download-detection">
-            <option value="">All platforms</option>
-            <option value="windows">Windows</option>
-            <option value="macos">macOS</option>
-            <option value="linux">Linux</option>
-            <option value="android">Android</option>
-            <option value="ios">iPhone / iPad preview</option>
-          </select>
-          <p id="download-detection" aria-live="polite"></p>
+      <section class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Your services, one player</h2>
+            <p>Use the music source that works for you.</p>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <h3>Navidrome</h3>
+              <p>The fullest Naviamp experience, including smart playlists, ratings, rich OpenSubsonic features, and sonic discovery when enabled.</p>
+            </article>
+            <article class="service-card">
+              <h3>Subsonic + OpenSubsonic</h3>
+              <p>Connect compatible self-hosted servers. Naviamp detects capabilities and presents the features each server supports.</p>
+            </article>
+            <article class="service-card">
+              <h3>Jellyfin</h3>
+              <p>Browse, search, stream, download, favorite, and organize music from your Jellyfin libraries.</p>
+            </article>
+            <article class="service-card">
+              <h3>Bandcamp</h3>
+              <p>Play and download your collection through Bandcamp's Subsonic beta using credentials from Fan Settings.</p>
+            </article>
+          </div>
         </div>
-        <div class="download-recommendation" id="download-recommendation" hidden aria-labelledby="download-recommendation-title">
-          <p class="label" id="download-recommendation-label">For your device</p>
-          <h3 id="download-recommendation-title"></h3>
-          <p id="download-recommendation-description"></p>
-          <div class="download-actions" id="download-recommendation-actions"></div>
-        </div>
-        <div class="download-grid" aria-label="Downloads for all platforms">
-          <article class="download-card" data-platform="windows">
-            <h3>Windows</h3>
-            <p class="download-description">Install from Microsoft Store for automatic updates. Standalone EXE, MSI, and ZIP packages are also available on GitHub.</p>
-            <div class="download-actions"><a class="download-button" href="https://apps.microsoft.com/detail/9PCFJ644LXLL">Get it from Microsoft Store</a><a href="https://github.com/goosepod/naviamp/releases/latest" aria-label="Windows downloads on GitHub">Also available on GitHub</a></div>
+      </section>
+
+      <section class="section stories" id="features">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Go further into your collection</p>
+            <h2>More ways to find your next favorite.</h2>
+            <p>A familiar library is only the beginning.</p>
+          </div>
+          <article class="feature-story">
+            <div>
+              <p class="eyebrow">Discover</p>
+              <h3>Let one good track lead to another.</h3>
+              <p>Build a listening session around artists, albums, or genres. Explore new combinations, edit the queue, and save a mix you want to hear again.</p>
+              <p>Sonic Mix, Sonic Path, related tracks, and sonic autoplay go deeper when your server provides compatible similarity data.</p>
+              <a href="/naviamp/compatibility/#server-features">See discovery requirements →</a></div>
+            <figure><a href="/assets/naviamp/mix-builders.jpg"><img loading="lazy" src="/assets/naviamp/mix-builders.jpg" alt="Naviamp mix builders connected to the Navidrome demo library" width="1281" height="941"></a>
+              <figcaption>Start with music you love. Choose where it goes next.</figcaption>
+            </figure>
           </article>
-          <article class="download-card" data-platform="macos">
-            <h3>macOS</h3>
-            <p class="download-description">Get the DMG installer or portable ZIP for Apple silicon from the latest GitHub release.</p>
-            <div class="download-actions"><a class="download-button" href="https://github.com/goosepod/naviamp/releases/latest">Get macOS downloads on GitHub</a></div>
+          <article class="feature-story reverse">
+            <div>
+              <p class="eyebrow">Listen</p>
+              <h3>The details make the difference.</h3>
+              <p>Gapless albums. Smooth crossfades. ReplayGain for a more consistent listening level. Shape playback with an equalizer, sample-rate controls, and album or playlist profiles.</p>
+              <p>Keep waveform seeking, lyrics, track details, and your queue close at hand.</p>
+              <a href="/naviamp/compatibility/#audio-formats">Explore audio support →</a></div>
+            <figure><a href="/assets/naviamp/player-full.jpg"><img loading="lazy" src="/assets/naviamp/player-full.jpg" alt="Naviamp full player with artwork and audio information, using the Navidrome demo library" width="1298" height="931"></a>
+              <figcaption>Artwork, playback details, and controls for the song.</figcaption>
+            </figure>
           </article>
-          <article class="download-card" data-platform="linux">
-            <h3>Linux</h3>
-            <p class="download-description">Choose a DEB, RPM, or portable ZIP for x64 from the latest GitHub release.</p>
-            <div class="download-actions"><a class="download-button" href="https://github.com/goosepod/naviamp/releases/latest">Get Linux downloads on GitHub</a></div>
-          </article>
-          <article class="download-card" data-platform="android">
-            <h3>Android</h3>
-            <p class="download-description">Get the APK from the latest GitHub release to install on your Android device.</p>
-            <div class="download-actions"><a class="download-button" href="https://github.com/goosepod/naviamp/releases/latest">Get Android downloads on GitHub</a></div>
-          </article>
-          <article class="download-card" data-platform="ios">
-            <h3>iPhone / iPad preview</h3>
-            <p class="download-description">An unsigned arm64 IPA is available on GitHub. Installation requires your own signing; read the sideloading instructions in the release.</p>
-            <div class="download-actions"><a class="download-button" href="https://github.com/goosepod/naviamp/releases/latest">Get the iOS preview on GitHub</a></div>
+          <article class="feature-story">
+            <div>
+              <p class="eyebrow">Personalize</p>
+              <h3>A player with your kind of atmosphere.</h3>
+              <p>Let album-art colors set the mood. Choose Aurora gradients, blur, or a solid background, then tune the metadata and layout to suit your screen.</p>
+              <p>On desktop, reactive visualizers bring another dimension to listening.</p>
+            </div>
+            <figure><a href="/assets/naviamp/personalization.jpg"><img loading="lazy" src="/assets/naviamp/personalization.jpg" alt="Naviamp player with a colorful album-inspired background from the Navidrome demo library" width="1281" height="941"></a>
+              <figcaption>Color and artwork that belong to the music.</figcaption>
+            </figure>
           </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="hero-screenshot">
-      <div class="container"><img src="/assets/naviamp/desktop-now-playing-queue.png" alt="Naviamp desktop Now Playing screen and queue"></div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-title"><h2>Your services, one player</h2><p>Use the music source that works for you.</p></div>
-        <div class="service-grid">
-          <article class="service-card"><h3>Navidrome</h3><p>The fullest Naviamp experience, including smart playlists, ratings, rich OpenSubsonic features, and sonic discovery when enabled.</p></article>
-          <article class="service-card"><h3>Subsonic + OpenSubsonic</h3><p>Connect compatible self-hosted servers. Naviamp detects capabilities and presents the features each server supports.</p></article>
-          <article class="service-card"><h3>Jellyfin</h3><p>Browse, search, stream, download, favorite, and organize music from your Jellyfin libraries.</p></article>
-          <article class="service-card"><h3>Bandcamp</h3><p>Play and download your collection through Bandcamp's Subsonic beta using credentials from Fan Settings.</p></article>
+      <section class="section player-showcase" id="player-sizes">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">One player, room to adapt</p>
+            <h2>Find your listening view.</h2>
+            <p>Different sizes make room for different things. These are real Naviamp layouts, captured with the same demo track.</p>
+          </div>
+          <div class="showcase" data-showcase>
+            <div class="showcase-tabs" hidden aria-label="Player views"><button type="button" data-view="split">Split view</button><button type="button" data-view="full">Full player</button><button type="button" data-view="narrow">Narrow player</button><button type="button" data-view="compact">Compact player</button><button type="button" data-view="mini">Mini player</button></div>
+            <div class="showcase-panels">
+              <figure id="view-split" data-panel="split">
+                <div class="layout-image"><a href="/assets/naviamp/player-split.jpg"><img loading="lazy" src="/assets/naviamp/player-split.jpg" alt="Naviamp split view playing the same colorful demo album" width="1298" height="931"></a></div>
+                <figcaption><span class="eyebrow">Split view</span>
+                  <h3>Browse without losing the player.</h3>
+                  <p>Artwork, track details, and playback controls stay beside your library. Use the other pane to browse or search while you listen.</p>
+                </figcaption>
+              </figure>
+              <figure id="view-full" data-panel="full">
+                <div class="layout-image"><a href="/assets/naviamp/player-full.jpg"><img loading="lazy" src="/assets/naviamp/player-full.jpg" alt="Naviamp full player playing the same colorful demo album" width="1298" height="931"></a></div>
+                <figcaption><span class="eyebrow">Full player</span>
+                  <h3>Make room for the listening session.</h3>
+                  <p>Give Now Playing the window. Large artwork and track details sit beside playback controls, ratings, volume, and a waveform across the bottom.</p>
+                </figcaption>
+              </figure>
+              <figure id="view-narrow" data-panel="narrow">
+                <div class="layout-image"><a href="/assets/naviamp/player-narrow.jpg"><img loading="lazy" src="/assets/naviamp/player-narrow.jpg" alt="Naviamp narrow player playing the same colorful demo album" width="320" height="733"></a></div>
+                <figcaption><span class="eyebrow">Narrow player</span>
+                  <h3>Keep the song in focus.</h3>
+                  <p>Artwork, song details, ratings, and audio information stack above transport controls and volume. Scroll for the queue, or open lyrics when available.</p>
+                </figcaption>
+              </figure>
+              <figure id="view-compact" data-panel="compact">
+                <div class="layout-image"><a href="/assets/naviamp/compact-now-playing.jpg"><img loading="lazy" src="/assets/naviamp/compact-now-playing.jpg" alt="Naviamp compact player playing the same colorful demo album" width="320" height="500"></a></div>
+                <figcaption><span class="eyebrow">Compact player</span>
+                  <h3>The essentials, close at hand.</h3>
+                  <p>Smaller artwork leaves room for the song, waveform, ratings, and transport controls. Audio details share one row; the volume slider gives way to the shorter layout.</p>
+                </figcaption>
+              </figure>
+              <figure id="view-mini" data-panel="mini">
+                <div class="layout-image"><a href="/assets/naviamp/player-mini.jpg"><img loading="lazy" src="/assets/naviamp/player-mini.jpg" alt="Naviamp mini player playing the same colorful demo album" width="320" height="733"></a></div>
+                <figcaption><span class="eyebrow">Mini player</span>
+                  <h3>Keep browsing. Keep listening.</h3>
+                  <p>Return to your library with a small playback bar. Artwork, track identity, and previous, play/pause, and next controls remain visible; open Now Playing for the full view.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <p class="capture-note">Window size, display settings, and available server features affect what is shown. Narrow desktop captures demonstrate adaptive layouts; they are not iPhone or Android screenshots.</p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-title"><h2>A lot more than play</h2><p>The big features, close at hand.</p></div>
-        <div class="feature-grid">
-          <article class="feature-card"><h3>Explore the whole library</h3><p>Albums, artists, tracks, genres, favorites, recent music, random picks, rich search, and every credited artist.</p></article>
-          <article class="feature-card"><h3>Build a listening session</h3><p>Artist, Album, and Genre Mixes plus Sonic Mix, Sonic Path, track radio, related music, and sonic autoplay on compatible servers.</p></article>
-          <article class="feature-card"><h3>Shape your playlists</h3><p>Create and edit regular playlists, save generated queues, and build reusable smart playlists where the provider supports them.</p></article>
-          <article class="feature-card"><h3>Bring radio with you</h3><p>Create, edit, browse, and play internet radio stations beside the rest of your collection, with live metadata when available.</p></article>
-          <article class="feature-card"><h3>Listen offline</h3><p>Download music, manage storage and cache behavior, and switch to an offline dashboard away from the server.</p></article>
-          <article class="feature-card"><h3>Own the playback</h3><p>Queues, waveform seeking, lyrics, ReplayGain, gapless playback, crossfade, sample-rate controls, favorites, ratings, and detailed metadata.</p></article>
-          <article class="feature-card"><h3>Make it look right</h3><p>Album-art colors, Aurora gradients, blur, compact layouts, configurable metadata, waveforms, and reactive desktop visualizers.</p></article>
-          <article class="feature-card"><h3>Move between devices</h3><p>A shared experience across desktop, Android, and iOS, with secure credentials, settings sync, and Android Auto support.</p></article>
+      <section class="section" id="screenshots">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Inside Naviamp</p>
+            <h2>Your library, from every angle.</h2>
+            <p>Select any screenshot to see it at full size.</p>
+          </div>
+          <div class="tour-grid">
+            <figure><a href="/assets/naviamp/library-artists.jpg"><img loading="lazy" src="/assets/naviamp/library-artists.jpg" alt="Explore your artists in Naviamp, connected to the Navidrome demo server" width="1281" height="941"></a>
+              <figcaption>
+                <h3>Explore your artists</h3>
+                <p>Artist portraits and your library, ready to browse.</p>
+              </figcaption>
+            </figure>
+            <figure><a href="/assets/naviamp/artist-detail.jpg"><img loading="lazy" src="/assets/naviamp/artist-detail.jpg" alt="Explore a discography in Naviamp, connected to the Navidrome demo server" width="1281" height="941"></a>
+              <figcaption>
+                <h3>Explore a discography</h3>
+                <p>Albums and top tracks bring an artist’s catalog together.</p>
+              </figcaption>
+            </figure>
+            <figure><a href="/assets/naviamp/offline-downloads.jpg"><img loading="lazy" src="/assets/naviamp/offline-downloads.jpg" alt="Take music with you in Naviamp, connected to the Navidrome demo server" width="1281" height="941"></a>
+              <figcaption>
+                <h3>Take music with you</h3>
+                <p>Manage downloads for listening away from your server.</p>
+              </figcaption>
+            </figure>
+            <figure><a href="/assets/naviamp/album-detail.jpg"><img loading="lazy" src="/assets/naviamp/album-detail.jpg" alt="Inside an album in Naviamp, connected to the Navidrome demo server" width="1281" height="941"></a>
+              <figcaption>
+                <h3>Inside an album</h3>
+                <p>Track listings, album actions, and playback in one place.</p>
+              </figcaption>
+            </figure>
+          </div>
+          <p class="capture-note">App screenshots use the public <a href="https://www.navidrome.org/demo/">Navidrome demo library</a>. Its collection and enabled features may change.</p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-title"><h2>Playback format support</h2><p>Direct playback across every Naviamp platform.</p></div>
-        <p class="table-note"><strong>Compatibility</strong> means Naviamp ships a decoder for that platform, but the format is not yet part of the fully tested cross-platform release contract. A dash means Naviamp does not currently promise direct playback there; a Navidrome server may still make the file playable by transcoding it.</p>
-        <div class="support-table-wrap" role="region" aria-label="Playback format support by platform" tabindex="0">
-          <table class="support-table format-support-table">
-            <thead><tr><th scope="col">Audio format or stream</th><th scope="col">Android</th><th scope="col">macOS</th><th scope="col">Windows</th><th scope="col">Linux</th><th scope="col">iOS</th></tr></thead>
-            <tbody>
-              <tr><th scope="row">MP3, MP2, and MP1</th><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-              <tr><th scope="row">Ogg Vorbis</th><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-              <tr><th scope="row">WAV</th><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-              <tr><th scope="row">AIFF</th><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-              <tr><th scope="row">FLAC and Ogg FLAC</th><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-              <tr><th scope="row">Opus</th><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-              <tr><th scope="row">AAC and AAC in M4A/MP4</th><td>Yes</td><td>Yes <span class="cell-note">system codec</span></td><td>Yes</td><td>Yes</td><td>Yes <span class="cell-note">system codec</span></td></tr>
-              <tr><th scope="row">ALAC in M4A/MP4</th><td>Yes</td><td>Yes <span class="cell-note">system codec</span></td><td>Yes</td><td>Yes</td><td>Yes <span class="cell-note">system codec</span></td></tr>
-              <tr><th scope="row">Monkey's Audio <code>.ape</code></th><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td></tr>
-              <tr><th scope="row">DSD <code>.dsf</code>, <code>.dff</code></th><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td></tr>
-              <tr><th scope="row">Musepack <code>.mpc</code></th><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td></tr>
-              <tr><th scope="row">WebM and Matroska audio</th><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td></tr>
-              <tr><th scope="row">WavPack <code>.wv</code></th><td>Compatibility</td><td>Compatibility</td><td>—</td><td>Compatibility</td><td>Compatibility</td></tr>
-              <tr><th scope="row">AC-3 <code>.ac3</code></th><td>Compatibility</td><td>—</td><td>—</td><td>Compatibility</td><td>—</td></tr>
-              <tr><th scope="row">HLS streams and playlists</th><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td><td>Compatibility</td></tr>
-              <tr><th scope="row">MIDI, Speex, and WMA</th><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-            </tbody>
-          </table>
+      <section class="section download-section" id="downloads" aria-labelledby="downloads-title">
+        <div class="container">
+          <div class="section-title">
+            <h2 id="downloads-title">Download Naviamp</h2>
+            <p>Your music, on your device.</p>
+          </div>
+          <div class="download-picker" id="download-picker" hidden>
+            <label for="download-platform">Choose your platform</label>
+            <select id="download-platform" aria-describedby="download-detection">
+              <option value="">All platforms</option>
+              <option value="windows">Windows</option>
+              <option value="macos">macOS</option>
+              <option value="linux">Linux</option>
+              <option value="android">Android</option>
+              <option value="ios">iPhone / iPad preview</option>
+            </select>
+            <p id="download-detection" aria-live="polite"></p>
+          </div>
+          <div class="download-recommendation" id="download-recommendation" hidden aria-labelledby="download-recommendation-title">
+            <p class="label" id="download-recommendation-label">For your device</p>
+            <h3 id="download-recommendation-title"></h3>
+            <p id="download-recommendation-description"></p>
+            <div class="download-actions" id="download-recommendation-actions"></div>
+          </div>
+          <div class="download-grid" aria-label="Downloads for all platforms">
+            <article class="download-card" data-platform="windows">
+              <h3>Windows</h3>
+              <p class="download-description">Install from Microsoft Store for automatic updates. Standalone EXE, MSI, and ZIP packages are also available on GitHub.</p>
+              <div class="download-actions"><a class="download-button" href="https://apps.microsoft.com/detail/9PCFJ644LXLL">Get it from Microsoft Store</a><a href="https://github.com/goosepod/naviamp/releases/latest" aria-label="Windows downloads on GitHub">Also available on GitHub</a></div>
+            </article>
+            <article class="download-card" data-platform="macos">
+              <h3>macOS</h3>
+              <p class="download-description">Get the DMG installer or portable ZIP for Apple silicon from the latest GitHub release.</p>
+              <div class="download-actions"><a class="download-button" href="https://github.com/goosepod/naviamp/releases/latest">Get macOS downloads on GitHub</a></div>
+            </article>
+            <article class="download-card" data-platform="linux">
+              <h3>Linux</h3>
+              <p class="download-description">Choose a DEB, RPM, or portable ZIP for x64 from the latest GitHub release.</p>
+              <div class="download-actions"><a class="download-button" href="https://github.com/goosepod/naviamp/releases/latest">Get Linux downloads on GitHub</a></div>
+            </article>
+            <article class="download-card" data-platform="android">
+              <h3>Android</h3>
+              <p class="download-description">Get the APK from the latest GitHub release to install on your Android device.</p>
+              <div class="download-actions"><a class="download-button" href="https://github.com/goosepod/naviamp/releases/latest">Get Android downloads on GitHub</a></div>
+            </article>
+            <article class="download-card" data-platform="ios">
+              <h3>iPhone / iPad preview</h3>
+              <p class="download-description">An unsigned arm64 IPA is available on GitHub. Installation requires your own signing; read the sideloading instructions in the release.</p>
+              <div class="download-actions"><a class="download-button" href="https://github.com/goosepod/naviamp/releases/latest">Get the iOS preview on GitHub</a></div>
+            </article>
+          </div>
         </div>
-        <p class="table-footnote">This table describes direct Naviamp playback, including downloaded originals. Transcoded streams and downloads use the format produced by the server. MIDI is not advertised even where a decoder is packaged because Naviamp does not ship the soundfont required for reliable playback.</p>
-      </div>
-    </section>
+      </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-title"><h2>Naviamp + Navidrome support</h2><p>Core features and the server enhancements that unlock more.</p></div>
-        <p class="table-note">Most app behavior is shared across every release platform. Server-backed features depend on the connected account's permissions and on the capabilities the server advertises; Naviamp removes controls that the active server cannot fulfill.</p>
-        <div class="support-table-wrap" role="region" aria-label="Naviamp and Navidrome feature support" tabindex="0">
-          <table class="support-table feature-support-table">
-            <thead><tr><th scope="col">Capability</th><th scope="col">Naviamp support</th><th scope="col">Navidrome or server requirement</th></tr></thead>
-            <tbody>
-              <tr><th scope="row">Browse and search artists, albums, tracks, genres, favorites, recent music, and random picks</th><td>Yes</td><td>Standard Subsonic/OpenSubsonic library APIs</td></tr>
-              <tr><th scope="row">Browse every credited artist and follow artist links from a track</th><td>Yes</td><td>Rich artist-credit metadata when supplied by the server</td></tr>
-              <tr><th scope="row">Select and combine music libraries</th><td>Yes</td><td>Multiple music folders exposed by the server</td></tr>
-              <tr><th scope="row">Create, rename, reorder, edit, and delete regular playlists</th><td>Yes</td><td>Playlist write permission</td></tr>
-              <tr><th scope="row">Save the current queue or a generated mix as a playlist</th><td>Yes</td><td>Playlist write permission</td></tr>
-              <tr><th scope="row">Create and edit native smart playlists</th><td>Navidrome enhancement</td><td>Navidrome native API; includes nested rules, multiple sorts, limits, NSP JSON import, and preview against the synced library</td></tr>
-              <tr><th scope="row">Stream original-quality audio</th><td>Yes</td><td>A directly supported source format, or server transcoding</td></tr>
-              <tr><th scope="row">Stream at a selected transcoded quality</th><td>Yes</td><td>Server transcoding support</td></tr>
-              <tr><th scope="row">Download originals or transcoded copies for offline listening</th><td>Yes</td><td>Download permission; transcoded downloads require server support</td></tr>
-              <tr><th scope="row">Favorite tracks, albums, and artists</th><td>Yes</td><td>Server favorite/star APIs</td></tr>
-              <tr><th scope="row">Rate tracks from one to five stars</th><td>Yes</td><td>Server rating support</td></tr>
-              <tr><th scope="row">Display plain, time-synced, and enhanced lyrics</th><td>Server-dependent</td><td>Legacy lyrics or the OpenSubsonic <code>songLyrics</code> extension; enhanced lyrics use version 2</td></tr>
-              <tr><th scope="row">Build artist, album, genre, and track radio queues</th><td>Yes</td><td>Generated-radio endpoints</td></tr>
-              <tr><th scope="row">Sonic Mix, Sonic Path, related tracks, and sonic autoplay</th><td>Navidrome enhancement</td><td>Server advertises the OpenSubsonic <code>sonicSimilarity</code> extension and has similarity data</td></tr>
-              <tr><th scope="row">Report plays and update listening history</th><td>Yes</td><td>Scrobbling support; falls back to the standard Subsonic endpoint</td></tr>
-              <tr><th scope="row">Report precise playback position and completion</th><td>Navidrome enhancement</td><td>OpenSubsonic <code>playbackReport</code> extension</td></tr>
-              <tr><th scope="row">Resume a transcoded stream from a server-side offset</th><td>Navidrome enhancement</td><td>OpenSubsonic <code>transcodeOffset</code> extension</td></tr>
-              <tr><th scope="row">Browse, create, edit, delete, and play internet radio stations</th><td>Yes</td><td>Internet-radio station APIs for saved stations</td></tr>
-              <tr><th scope="row">Authenticate with a renewable native session token</th><td>Navidrome enhancement</td><td>Navidrome native authentication; standard token-and-salt authentication remains available</td></tr>
-              <tr><th scope="row">Gapless playback, crossfade, ReplayGain, equalizer, sample-rate matching, and downmixing</th><td>Yes</td><td>Performed locally by Naviamp's BASS playback engine</td></tr>
-              <tr><th scope="row">Waveform seeking, audio metadata, lyrics timing, and visualizers</th><td>Yes</td><td>Performed locally; metadata and lyrics depend on the source</td></tr>
-              <tr><th scope="row">Android Auto</th><td>Android only</td><td>Android host and a connected media-capable vehicle or head unit</td></tr>
-              <tr><th scope="row">Podcasts, server chat, public shares, and jukebox control</th><td>Not currently supported</td><td>—</td></tr>
-            </tbody>
-          </table>
+      <section class="section" id="help">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Get started</p>
+            <h2>Your first track is three steps away.</h2>
+          </div>
+          <ol class="setup-steps">
+            <li>
+              <h3>Install Naviamp</h3>
+              <p>Choose the download for your device. iPhone and iPad builds are a preview that requires your own signing.</p>
+            </li>
+            <li>
+              <h3>Connect your collection</h3>
+              <p>Choose your service and enter its address and credentials. Bandcamp uses Subsonic beta credentials from Fan Settings.</p>
+            </li>
+            <li>
+              <h3>Find something you love</h3>
+              <p>Browse an album, search for an artist, or start a mix. Download music when you want to take it offline.</p>
+            </li>
+          </ol>
+          <div class="faq">
+            <h3>A few things to know</h3>
+            <details>
+              <summary>Does Naviamp include a music subscription?</summary>
+              <p>Naviamp is a player for a collection you already have access to. Connect your own compatible music server or your Bandcamp collection; Naviamp does not supply a streaming catalog.</p>
+            </details>
+            <details>
+              <summary>Can I try it without setting up a server?</summary>
+              <p>Yes. Connect to <code>https://demo.navidrome.org</code> with username <code>demo</code> and password <code>demo</code>. This public demo has a sample collection and some features are restricted. <a href="https://www.navidrome.org/demo/">About the Navidrome demo</a>.</p>
+            </details>
+            <details>
+              <summary>Does every service support every feature?</summary>
+              <p>Capabilities depend on your provider, server configuration, and account permissions. Sonic discovery needs compatible similarity data, and native smart-playlist editing is a Navidrome enhancement. <a href="/naviamp/compatibility/">Read the full compatibility guide</a>.</p>
+            </details>
+            <details>
+              <summary>Can I listen offline?</summary>
+              <p>Download music before you leave your connection. Naviamp provides download management, storage and cache settings, and an offline dashboard. Downloads depend on the permissions your server provides.</p>
+            </details>
+            <details>
+              <summary>How do I install and update Naviamp?</summary>
+              <p>On Windows, Microsoft Store handles updates. For packages downloaded from GitHub, use the latest release and read its installation and upgrade notes. macOS and Windows standalone packages are unsigned and may show an operating-system warning. <a href="https://github.com/goosepod/naviamp/releases/latest">Current release and installation notes</a>.</p>
+            </details>
+            <details>
+              <summary>Where can I get help or suggest something?</summary>
+              <p><a href="https://discord.gg/7dd9954VGd">Join the Naviamp Discord</a> for questions and discussion, or <a href="https://github.com/goosepod/naviamp/issues">report a problem on GitHub</a>. Community translations are managed through <a href="https://hosted.weblate.org/projects/naviamp/">Weblate</a>.</p>
+            </details>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section screenshot-section">
-      <div class="container">
-        <div class="section-title"><h2>Take a look</h2><p>The same shared experience in compact and narrow layouts.</p></div>
-        <div class="screenshot-grid">
-          <figure><img src="/assets/naviamp/compact-now-playing.png" alt="Compact Now Playing screen"></figure>
-          <figure><img src="/assets/naviamp/mobile-queue.png" alt="Now Playing queue in a narrow layout"></figure>
-          <figure><img src="/assets/naviamp/mix-builders.png" alt="Artist, album, genre, Sonic Path, and Sonic Mix builders"></figure>
-          <figure><img src="/assets/naviamp/playlists.png" alt="Playlist library"></figure>
-          <figure><img src="/assets/naviamp/library-artists.png" alt="Artist library with alphabetical navigation"></figure>
-          <figure><img src="/assets/naviamp/search.png" alt="Library search results"></figure>
-          <figure><img src="/assets/naviamp/internet-radio.png" alt="Internet radio stations"></figure>
-          <figure><img src="/assets/naviamp/offline-downloads.png" alt="Downloads and offline dashboard"></figure>
-          <figure><img src="/assets/naviamp/settings.png" alt="Naviamp settings"></figure>
+      <section class="section release-strip">
+        <div class="container">
+          <div>
+            <p class="eyebrow">Keep up with Naviamp</p>
+            <h2>New in 2.9: desktop Cast and expanded downloads.</h2>
+            <p>Cast online music from desktop, keep albums and artists downloaded, and give your player the whole screen with fullscreen.</p>
+          </div>
+          <a class="primary-button" href="https://github.com/goosepod/naviamp/releases/tag/v2.9.0">Explore the 2.9 release →</a></div>
+      </section>
+
+      <section class="section">
+        <div class="container project-details">
+          <h2>Open, private, and yours</h2>
+          <div>
+            <p>Your library stays with the service or server you choose. Naviamp contains no ads or third-party tracking SDKs, and credentials use operating-system secure storage where supported.</p>
+            <p>Provider capabilities differ, so Naviamp hides or gracefully falls back from server-specific features instead of leaving broken controls behind.</p>
+            <p>Naviamp is available for macOS, Windows, Linux, and Android. An unsigned arm64 iPhone/iPad IPA preview is available for users who can provide their own signing.</p>
+            <p>Naviamp is translated by its community using Weblate.</p>
+            <div class="inline-links"><a href="#downloads">Get Naviamp</a><a href="https://hosted.weblate.org/projects/naviamp/">Help translate on Weblate</a><a href="/naviamp/privacy/">Privacy policy</a><a href="https://github.com/goosepod/naviamp">View on GitHub</a></div>
+          </div>
         </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-row"><span>Naviamp by <a href="/">GoosePod</a></span>
+        <div class="footer-links"><a href="/naviamp/compatibility/">Compatibility</a><a href="/naviamp/privacy/">Privacy</a><a href="https://github.com/goosepod/naviamp">GitHub</a><a href="https://discord.gg/7dd9954VGd">Discord</a></div>
       </div>
-    </section>
-
-    <section class="section">
-      <div class="container project-details">
-        <h2>Open, private, and yours</h2>
-        <div>
-          <p>Your library stays with the service or server you choose. Naviamp contains no ads or third-party tracking SDKs, and credentials use operating-system secure storage where supported.</p>
-          <p>Provider capabilities differ, so Naviamp hides or gracefully falls back from server-specific features instead of leaving broken controls behind.</p>
-          <p>Naviamp is available for macOS, Windows, Linux, and Android. An unsigned arm64 iPhone/iPad IPA preview is available for users who can provide their own signing.</p>
-          <p>Naviamp is translated by its community using Weblate.</p>
-          <div class="inline-links"><a href="#downloads">Get Naviamp</a><a href="https://hosted.weblate.org/projects/naviamp/">Help translate on Weblate</a><a href="/naviamp/privacy/">Privacy policy</a><a href="https://github.com/goosepod/naviamp">View on GitHub</a></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-row"><span>© 2026 GoosePod</span><div class="footer-links"><a href="/">Home</a><a href="/naviamp/privacy/">Privacy</a><a href="https://github.com/goosepod/naviamp">GitHub</a></div></div>
-  </footer>
-</body>
-</html>
+    </footer>
+</body></html>

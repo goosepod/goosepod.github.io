@@ -24,3 +24,19 @@ reuses those cards. Run the OS detection checks with `node --test tests/download
 ## Privacy-policy migration
 
 The canonical Naviamp privacy policy lives at `/naviamp/privacy/`. Keep the previous `ursasmar/naviamp-privacy` Pages site online until the Google Play Console privacy-policy URL has been changed and the new URL has been verified publicly.
+
+## Naviamp product page
+
+The Naviamp landing page has its own scoped stylesheet (`naviamp/website.css`). The shared
+`styles.css` still serves the other GoosePod projects. Complete format and server-feature tables
+live at `/naviamp/compatibility/`; keep that reference linked from the product page and sitemap.
+
+The player-size comparison in `naviamp/showcase.mjs` progressively enhances five ordinary figures.
+Without JavaScript, every view and caption remains visible. With JavaScript, it uses keyboard
+accessible tabs: Left/Right wrap, Home selects the first view, and End selects the last. Screenshot
+links open the original image without requiring JavaScript.
+
+All website app screenshots use Naviamp 2.9.0 connected to the public Navidrome demo server.
+See [screenshot provenance and verification](docs/naviamp-website-verification.md) before refreshing
+assets. Keep the release highlight tied to a public release and update its versioned link together
+with its description.
