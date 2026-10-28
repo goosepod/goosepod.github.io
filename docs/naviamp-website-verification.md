@@ -45,8 +45,9 @@ public demo's content and configuration can change.
   with keyboard focus on a tab. Focus follows the selection, and Left/Right wrap at the ends.
 - Verify all five figures remain visible in the original HTML without JavaScript. Download cards,
   FAQ disclosures, and original screenshot links must also remain usable without scripts.
-- Change the download platform to Windows and confirm the Microsoft Store recommendation, then
-  check the other choices, including the unsigned iOS preview description.
+- Change the download platform to Windows and confirm Microsoft Store is primary, then macOS and
+  confirm Mac App Store is primary. Each keeps GitHub as a secondary option. The iPhone/iPad beta
+  must recommend TestFlight and clearly label GitHub's unsigned IPA as a self-signing alternative.
 - Expand the demo-server FAQ and confirm that setup instructions are readable.
 - Visit the compatibility reference on desktop and phone. Its tables should scroll within their
   containers, and the underlying rows must match the previous homepage tables.
@@ -85,3 +86,11 @@ names, hover titles, and 44-pixel hit targets. Icon source/license information i
 `assets/social/README.md`. Checked while scrolled on desktop and at 390 × 844: both icons load,
 all navigation links remain available, section targets clear the header, and the page has no
 horizontal overflow. No JavaScript was added.
+
+## Apple distribution links
+
+Verified October 28, 2026: macOS recommendation and static card use the public Mac App Store
+listing; manually selecting iPhone/iPad uses the supplied iOS TestFlight link. Chrome checks at
+desktop size and 390 × 844 showed readable cards and no horizontal overflow. Blocking scripts
+with a preview-only Content Security Policy left both ordinary Apple download links available.
+All 13 download-platform detection tests, module syntax, and whitespace checks passed.

@@ -14,9 +14,10 @@ This repository is intended to be published with GitHub Pages from the `main` br
 
 The `/naviamp/#downloads` section recommends a platform using local browser information, with no
 network lookup or stored preference. A manual selector and all-platform cards remain available;
-without JavaScript, all download links still work. Windows uses Microsoft Store with a secondary
-GitHub option. Other platforms link to the latest GitHub release so users can choose an appropriate
-package; iOS is explicitly an unsigned preview requiring the user's own signing.
+without JavaScript, all download links still work. Windows uses Microsoft Store and macOS uses Mac
+App Store, each with a secondary GitHub option. The iPhone/iPad beta uses TestFlight, with an unsigned
+IPA on GitHub as a secondary option for users who provide their own signing. Linux and Android link
+to the latest GitHub release so users can choose an appropriate package.
 
 Keep download destinations and package descriptions in `naviamp/index.html`; the recommendation
 reuses those cards. Run the OS detection checks with `node --test tests/downloads.test.mjs`.
