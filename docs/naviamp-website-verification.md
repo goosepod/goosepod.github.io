@@ -94,3 +94,35 @@ listing; manually selecting iPhone/iPad uses the supplied iOS TestFlight link. C
 desktop size and 390 × 844 showed readable cards and no horizontal overflow. Blocking scripts
 with a preview-only Content Security Policy left both ordinary Apple download links available.
 All 13 download-platform detection tests, module syntax, and whitespace checks passed.
+
+## November 11, 2026 release audit
+
+Tracking: website issue #16 and application release-preparation issue
+https://github.com/goosepod/naviamp/issues/589. Reviewed all eight Naviamp pages against
+application main, the public v2.11.0 notes and the current README. Public v2.11.1 is
+not claimed before it ships.
+
+Corrected missing Aurral provider/discovery coverage, the stale v2.9 highlight,
+Android closed-Alpha enrollment instructions, the older signed Flatpak application
+version and X11/XWayland scope, TestFlight availability, Mac App Store platform targeting,
+and the distinction between GitHub releases and store/beta channels. The public Flatpak
+release remains v2.10.0-flatpak.1; newer signed packages are not claimed. Aurral remains
+a direct server connection, and its permissions/capability constraints are explicit.
+The fifth provider card spans the final desktop row. Screenshots retain their documented
+v2.9 provenance; no new screenshots or feature claims were fabricated.
+
+Validation: all 13 download detection cases pass; showcase module syntax and whitespace
+checks pass. A static audit checked 263 local links/assets across eight Naviamp pages,
+including fragment targets and duplicate IDs, with no errors. Chrome rendered the corrected
+landing page at desktop size and 390 x 844, including the Android recommendation and both
+its GitHub and Alpha-instructions links. Existing no-JavaScript HTML links remain present;
+this audit did not repeat the earlier full screenshot-dialog or script-blocked interaction
+matrix. Format rows and provider requirements were compared with the application README;
+existing Connect beta, iOS Connect exclusion and server requirements remain explicit.
+
+Fifteen external destinations returned HTTP 200. Weblate rejected automated requests with
+HTTP 403; its established project URL was retained rather than described as verified by HTTP.
+
+Every later application release must repeat this audit, update the release highlight only
+when that release is public, and record its own evidence. Stream Details and other v2.11.1
+copy will be added in coordination with publication.

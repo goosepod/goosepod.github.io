@@ -16,8 +16,7 @@ The `/naviamp/#downloads` section recommends a platform using local browser info
 network lookup or stored preference. A manual selector and all-platform cards remain available;
 without JavaScript, all download links still work. Windows uses Microsoft Store and macOS uses Mac
 App Store, each with a secondary GitHub option. The iPhone/iPad beta uses TestFlight, with an unsigned
-IPA on GitHub as a secondary option for users who provide their own signing. Linux and Android link
-to the latest GitHub release so users can choose an appropriate package.
+IPA on GitHub as a secondary option for users who provide their own signing. Linux offers the signed x86_64 Flatpak and direct GitHub downloads, with its current package version stated explicitly. Android offers GitHub APKs and instructions for the closed Google Play Alpha. Store and beta channel versions may differ from GitHub.
 
 Keep download destinations and package descriptions in `naviamp/index.html`; the recommendation
 reuses those cards. Run the OS detection checks with `node --test tests/downloads.test.mjs`.
@@ -52,3 +51,7 @@ The browser owns modal focus, Escape, and dismissal; an ordinary `method="dialog
 There is **no screenshot JavaScript**. An always-visible **Open image directly** link is the fallback
 for browsers without invoker commands and opens the original in the same tab; Back returns to the
 site. Preserve these links rather than adding a gallery runtime or nesting interactive controls.
+
+## Release audits
+
+Every Naviamp release includes a README and public website audit against accepted source and actual distribution status. Update feature/provider coverage, platform requirements, download links, package versions, installation instructions and known limits. Tie release highlights to a public release and record verification in `docs/naviamp-website-verification.md`. Coordinate with the application release readiness document; unreleased features must not be advertised as already available.

@@ -210,3 +210,5 @@ html:has(.screenshot-dialog[open]) { overflow: hidden; }
 .naviamp-site .nav-links { grid-column: 1 / -1; grid-row: 2; justify-content: flex-start; }
 .header-socials { grid-column: 2; grid-row: 1; }
 }
+/* Keep an odd final provider card from leaving an empty grid cell. */
+.naviamp-site .service-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
