@@ -120,6 +120,9 @@ this audit did not repeat the earlier full screenshot-dialog or script-blocked i
 matrix. Format rows and provider requirements were compared with the application README;
 existing Connect beta, iOS Connect exclusion and server requirements remain explicit.
 
+Fifteen external destinations returned HTTP 200. Weblate rejected automated requests with
+HTTP 403; its established project URL was retained rather than described as verified by HTTP.
+
 Every later application release must repeat this audit, update the release highlight only
 when that release is public, and record its own evidence. Stream Details and other v2.11.1
 copy will be added in coordination with publication.
