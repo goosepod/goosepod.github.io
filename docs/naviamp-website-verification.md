@@ -126,3 +126,13 @@ HTTP 403; its established project URL was retained rather than described as veri
 Every later application release must repeat this audit, update the release highlight only
 when that release is public, and record its own evidence. Stream Details and other v2.11.1
 copy will be added in coordination with publication.
+
+## v2.11.1 publication copy
+
+Tracking: website issue #18 and application issue #589. The prepared copy updates the
+release highlight and adds Stream Details, supported stream artwork and conditional audio
+quality to discovery/features/compatibility. It preserves metadata availability requirements,
+the older signed Flatpak version, store/beta qualifications, and v2.9 screenshot provenance.
+Merge only after v2.11.1 is public. Existing download tests, module syntax, local
+links/assets/fragments/unique IDs and whitespace checks pass. This text update does not
+claim a new screenshot capture or repeat the earlier browser interaction matrix.
