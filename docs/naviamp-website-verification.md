@@ -136,3 +136,23 @@ the older signed Flatpak version, store/beta qualifications, and v2.9 screenshot
 Merge only after v2.11.1 is public. Existing download tests, module syntax, local
 links/assets/fragments/unique IDs and whitespace checks pass. This text update does not
 claim a new screenshot capture or repeat the earlier browser interaction matrix.
+
+## November 22, 2026 v2.12.0 release audit
+
+Tracking: application release-preparation issue https://github.com/goosepod/naviamp/issues/635.
+Reviewed all eight Naviamp pages against the `release/2.12.0` changelog and README, the public
+v2.11.3 release and the live distribution channels. Public v2.12.0 is not claimed before it
+ships: Aurral companion mode, the Aurral 3.x requirement, Apple CarPlay (beta), Apple TV (beta,
+build from source only) and the Android Auto changes are held for publication copy.
+
+No corrections were needed for the currently published v2.11.3. The Linux card already defers
+the signed Flatpak version to its releases (now v2.11.3-flatpak.1); store, TestFlight, Alpha,
+unsigned-download, Connect beta and iOS Connect exclusion copy remain accurate. Screenshots
+retain their documented v2.9 provenance.
+
+Validation: all 13 download detection cases pass; showcase and downloads module syntax pass. A
+static audit checked 329 local links/assets across all 12 site pages, including fragment targets
+and duplicate IDs, with no errors. External destinations returned HTTP 200 except Weblate (HTTP
+403 to automated requests, as before) and the Google Play listing (HTTP 404 to signed-out
+requests while the app is in closed Alpha); both established URLs are retained. This audit did
+not repeat the browser rendering or script-blocked interaction matrix.
