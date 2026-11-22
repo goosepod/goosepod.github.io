@@ -156,3 +156,12 @@ and duplicate IDs, with no errors. External destinations returned HTTP 200 excep
 403 to automated requests, as before) and the Google Play listing (HTTP 404 to signed-out
 requests while the app is in closed Alpha); both established URLs are retained. This audit did
 not repeat the browser rendering or script-blocked interaction matrix.
+
+## v2.12.0 publication copy
+
+Tracking: application issue https://github.com/goosepod/naviamp/issues/635. The prepared copy adds
+Aurral companion mode and the Aurral 3.x requirement to the landing, features, discovery and
+compatibility pages, Apple CarPlay (beta) to devices and compatibility, Apple TV (beta) as
+build-from-source only with no published download, and the Android Auto playlists/recent/radio
+changes. Merge only after v2.12.0 is public; Aurral 2.x remains supported by v2.11.3. Local
+links/assets/fragments/unique IDs and whitespace checks pass. No new screenshots are claimed.
